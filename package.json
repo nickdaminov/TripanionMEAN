@@ -1,0 +1,30 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Tripanion webapp project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnantachokD/WebAppGroup3.git"
+  },
+  "author": "group3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnantachokD/WebAppGroup3/issues"
+  },
+  "homepage": "https://github.com/AnantachokD/WebAppGroup3#readme"
+}
