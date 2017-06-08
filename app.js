@@ -20,11 +20,11 @@ const app = express();
 
 const users = require('./scr/routes/users');
 
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname,'./scr/public')));
+app.use(express.static(path.join(__dirname,'public')));
 
 app.use(bodyParser.json());
 
@@ -37,6 +37,10 @@ app.use('/users', users);
 
 app.get('/', function(req,res) {
     res.send('Invalid');
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.listen(port, function() {
