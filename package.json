@@ -4,7 +4,7 @@
   "description": "Tripanion webapp project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./src/test/modelTest.js",
     "start": "node app"
   },
   "dependencies": {
