@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
-const config = require('./scr/config/database');
+const config = require('./src/config/database');
 
 mongoose.connect(config.database);
 
@@ -18,9 +18,11 @@ mongoose.connection.on('error', function (err) {
 
 const app = express();
 
-const users = require('./scr/routes/users');
+const users = require('./src/routes/users');
 
+//const port = 3000;
 const port = process.env.PORT || 8080;
+
 
 app.use(cors());
 
@@ -31,7 +33,7 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./scr/config/passport')(passport);
+require('./src/config/passport')(passport);
 
 app.use('/users', users);
 
