@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/AnantachokD/WebAppGroup3/issues"
   },
-  "homepage": "https://github.com/AnantachokD/WebAppGroup3#readme"
+  "homepage": "https://github.com/AnantachokD/WebAppGroup3#readme",
+  "devDependencies": {
+    "chai": "^4.0.2"
+  }
 }
