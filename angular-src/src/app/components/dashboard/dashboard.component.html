@@ -1,2 +1,39 @@
-<h2 class="page-header">Dashboard</h2>
-<p>Welcome to your dashboard</p>
+<h2 class="page-header">Trip Room</h2>
+<form (submit)="onCliclSearch()">
+    <div class="form-group">
+        <label>Destination</label><br>
+        <select [(ngModel)]="destination" name="destination" class="form-control">
+            <option value="Austria">Austria</option>
+            <option value="Italy">Italy</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Malta">Malta</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Poland">Poland</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Finland">Finland</option>
+            <option value="Romania">Romania</option>
+            <option value="France">France</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Germany">Germany</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Greece">Greece</option>
+            <option value="Spain">Spain</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Ireland">Ireland</option>
+            <option value="United Kingdom">United Kingdom</option>
+        </select>
+
+        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions]>Search</button>
+        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] [routerLink]="['/createTrip']">Create Trip</button>
+    </div>
+</form>

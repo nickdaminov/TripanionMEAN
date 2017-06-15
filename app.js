@@ -19,6 +19,8 @@ mongoose.connection.on('error', function (err) {
 const app = express();
 
 const users = require('./src/routes/users');
+const trips = require('./src/routes/trips');
+
 
 //const port = 3000;
 const port = process.env.PORT || 8080;
@@ -36,6 +38,8 @@ app.use(passport.session());
 require('./src/config/passport')(passport);
 
 app.use('/users', users);
+app.use('/trips', trips);
+
 
 app.get('/', function(req,res) {
     res.send('Invalid');
