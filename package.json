@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/AnantachokD/WebAppGroup3#readme",
   "devDependencies": {
-    "chai": "^4.0.2"
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
   }
 }
