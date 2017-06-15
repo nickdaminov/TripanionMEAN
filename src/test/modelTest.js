@@ -4,9 +4,9 @@
 var chai = require('chai');
 
 var assert = chai.assert;
-describe('User module', () => {
-  describe('"getUserById"', () => {
-    it('should export a function', () => {
+describe('User module', function() {
+  describe('"getUserById"', function() {
+    it('should export a function', function() {
       // expect(User.getUserById).to.be.a('function')
       assert.equal(1, 1);
     })
