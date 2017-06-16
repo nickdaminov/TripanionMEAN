@@ -11,13 +11,14 @@ destination:String;
 trips = [{
 destination:"dsds",
 likes:12,
-
+description:"vdv",
 going:12
 },
 {
 destination:"dsds",
 likes:12,
-going:12
+going:12,
+description:"dsdgfg"
 }
 ];
 

@@ -1,13 +1,15 @@
 .trip {
 
-  width:100px;
-  hieght:200px;
+  width:300px;
+  hieght:400px;
   background-color: #d1f2eb;
   display: inline-block;
   border-radius: 5px;
   margin: 5px;
 
 }
+
+
 
 .rating {
   background-color:  #5dade2 ;
@@ -17,5 +19,5 @@
   font-family: cursive;
   height: 50px;
   width: 50px;
-  margin: auto;
+  float: right;
 }

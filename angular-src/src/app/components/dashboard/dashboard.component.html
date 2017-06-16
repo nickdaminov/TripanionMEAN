@@ -37,15 +37,16 @@
         <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] [routerLink]="['/createTrip']">Create Trip</button>
     </div>
 </form>
-<div class="trips">
-    <div class="trip" *ngFor="let trip of trips; let i = index">
-      <h6>Destination: </h6>
-      <p>{{trip.destination}}</p>
-      <h6>Going: </h6>
-      <p>{{trip.going}} poeples</p>
-      <div class="rating" (click)="click(i)">
+
+<div class="trips" >
+  <a [routerLink]="['/tripPage']">
+      <div class="trip" *ngFor="let trip of trips; let i = index" >
+        <h6>Destination: </h6>
+        <p>{{trip.destination}}</p>
+        <h6>Going: </h6>
+        <p>{{trip.going}} poeples</p>
         <h6>Likes</h6>
         <p>{{trip.likes}}</p>
       </div>
-    </div>
+    </a>
 </div>

@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { TripPageComponent } from './components/trip-page/trip-page.component';
 
 import {ValidateService} from './services/validate.service';
 import {AuthService} from './services/auth.service';
@@ -28,7 +29,8 @@ const appRoutes: Routes =  [
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   {path:'createTrip', component: CreateTripComponent},
-  {path:'editProfile', component:EditProfileComponent}
+  {path:'editProfile', component:EditProfileComponent},
+  {path:'tripPage', component:TripPageComponent}
 ]
 
 @NgModule({
@@ -41,7 +43,8 @@ const appRoutes: Routes =  [
     DashboardComponent,
     ProfileComponent,
     EditProfileComponent,
-    CreateTripComponent
+    CreateTripComponent,
+    TripPageComponent
   ],
   imports: [
     BrowserModule,
