@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
+import {TripService} from "../../services/trip.service";
+import {Trips} from "./Trip";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,27 +11,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-destination:String;
-trips = [{
-destination:"dsds",
-likes:12,
+  //destination:String;
+  trips : Trips[];
+/*trips = [{
+  destination: "adsd",
+  date: "dadsa",
+  tripName: "adsa",
+  description: "sda"
 
-going:12
 },
 {
-destination:"dsds",
-likes:12,
-going:12
+  destination: "dadsas",
+  date: "dadsa",
+  tripName: "dasds",
+  description: "dads"
 }
-];
+];*/
+
 
 click(index) {
-  this.trips[index].likes = this.trips[index].likes + 1;
+  //this.trips[index].likes = this.trips[index].likes + 1;
 }
 
-  constructor() { }
+  constructor(private tripService:TripService, private router:Router) {
+    this.tripService.getTrips().subscribe(trips => {
+        //  this.trips = trips.trips;
+        //},
+        //err => {
+      this.trips = trips;
+          //return false;
+        });;
+  }
 
   ngOnInit() {
+   /* this.tripService.getTrips().subscribe(trips => {
+          this.trips = trips.trips;
+        },
+        err => {
+          console.log(err);
+          return false;
+        });;*/
   }
 
 }

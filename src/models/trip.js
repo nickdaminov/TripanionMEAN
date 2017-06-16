@@ -27,18 +27,30 @@ module.exports.getTripById = function(id, callback){
     Trip.findById(id, callback);
 }
 
-module.exports.getUserByUsername = function(tripName, callback){
+module.exports.getTrips = function(callback){
+    Trip.find(callback);
+}
+
+
+module.exports.getTripByTripName = function(tripName, callback){
     const query = {tripName: tripName}
     Trip.findOne(query, callback);
 }
 
 module.exports.addTrip = function(newTrip, callback){
-    bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newTrip.tripName, salt, (err, hash) => {
-            if(err) throw err;
-            newTrip.tripName = hash;
-            newTrip.save(callback);
-        });
+   /* Trip.save(newTrip, function(err, task){
+        if(err){
+            res.send(err);
+        }
+        res.json(task);
     });
+}*/
+   // bcrypt.genSalt(10, (err, salt) => {
+     //   bcrypt.hash(newTrip.tripName, salt, (err, hash) => {
+       //     if(err) throw err;
+      //      newTrip.tripName = hash;
+            newTrip.save(callback);
+        //});
+    //});
 }
 

@@ -27,16 +27,16 @@ export class TripService {
             .map(res => res.json());
     }*/
 
-  /* getTrip(){
-        let headers = new Headers();
+  getTrips(){
+        //let headers = new Headers();
         //this.loadToken();
         //headers.append('Authorization', this.authToken);
-        headers.append('Content-Type','application/json');
+        //headers.append('Content-Type','application/json');
         //return this.http.get('http://localhost:3000/users/profile',{headers: headers})
-        return this.http.get('trips',{headers: headers})
+        return this.http.get('trips/trips')
 
             .map(res => res.json());
-    }*/
+    }
 
     /*storeUserData(token, user){
         localStorage.setItem('id_token', token);

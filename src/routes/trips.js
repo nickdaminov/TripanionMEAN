@@ -41,14 +41,24 @@ router.post('/createTrip', (req, res, next) => {
         description: req.body.description
     });
 
-    Trip.addTrip(newTrip, (err, user) => {
-        if(err){
-            res.json({success: false, msg:'Failed to create the trip'});
-        } else {
-            res.json({success: true, msg:'Trip created'});
-        }
-    });
+Trip.addTrip(newTrip, (err, user) => {
+    if(err){
+        res.json({success: false, msg:'Failed to create the trip'});
+    } else {
+        res.json({success: true, msg:'Trip created'});
+}
+});
 })
+
+// Get All Trips
+router.get('/trips', function(req, res, next){
+    Trip.find(function(err, trips){
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
 
 // Get All Trips
 /*router.get('/trip', function(req, res, next){
@@ -59,6 +69,8 @@ router.post('/createTrip', (req, res, next) => {
  res.json(trip);
  });
  });
+
+
 
  // Get Single Task
  router.get('/trip/:id', function(req, res, next){

@@ -1,6 +1,6 @@
 webpackJsonp([1,4],{
 
-/***/ 333:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32,6 +32,23 @@ var TripService = (function () {
         return this.http.post('trips/createTrip', trip, { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    /* authenticateUser(user){
+         let headers = new Headers();
+         headers.append('Content-Type','application/json');
+         //return this.http.post('http://localhost:3000/users/authenticate', user,{headers: headers})
+         return this.http.post('users/authenticate', user,{headers: headers})
+ 
+             .map(res => res.json());
+     }*/
+    TripService.prototype.getTrips = function () {
+        //let headers = new Headers();
+        //this.loadToken();
+        //headers.append('Authorization', this.authToken);
+        //headers.append('Content-Type','application/json');
+        //return this.http.get('http://localhost:3000/users/profile',{headers: headers})
+        return this.http.get('trips/trips')
+            .map(function (res) { return res.json(); });
+    };
     TripService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === 'function' && _a) || Object])
@@ -39,7 +56,7 @@ var TripService = (function () {
     return TripService;
     var _a;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/trip.service.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/trip.service.js.map
 
 /***/ }),
 
@@ -80,7 +97,7 @@ var ValidateService = (function () {
     ], ValidateService);
     return ValidateService;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/validate.service.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/validate.service.js.map
 
 /***/ }),
 
@@ -115,7 +132,7 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/main.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/main.js.map
 
 /***/ }),
 
@@ -149,7 +166,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/app.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/app.component.js.map
 
 /***/ }),
 
@@ -161,7 +178,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(469);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(508);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__(515);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__ = __webpack_require__(514);
@@ -176,7 +193,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__ = __webpack_require__(518);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_edit_profile_edit_profile_component__ = __webpack_require__(512);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_create_trip_create_trip_component__ = __webpack_require__(510);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_trip_service__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_trip_service__ = __webpack_require__(222);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -245,7 +262,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/app.module.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/app.module.js.map
 
 /***/ }),
 
@@ -254,8 +271,8 @@ var AppModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateTripComponent; });
@@ -310,7 +327,7 @@ var CreateTripComponent = (function () {
     return CreateTripComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/create-trip.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/create-trip.component.js.map
 
 /***/ }),
 
@@ -319,6 +336,8 @@ var CreateTripComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(222);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -330,10 +349,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var DashboardComponent = (function () {
-    function DashboardComponent() {
+    function DashboardComponent(tripService, router) {
+        var _this = this;
+        this.tripService = tripService;
+        this.router = router;
+        this.tripService.getTrips().subscribe(function (trips) {
+            //  this.trips = trips.trips;
+            //},
+            //err => {
+            _this.trips = trips;
+            //return false;
+        });
+        ;
     }
+    /*trips = [{
+      destination: "adsd",
+      date: "dadsa",
+      tripName: "adsa",
+      description: "sda"
+    
+    },
+    {
+      destination: "dadsas",
+      date: "dadsa",
+      tripName: "dasds",
+      description: "dads"
+    }
+    ];*/
+    DashboardComponent.prototype.click = function (index) {
+        //this.trips[index].likes = this.trips[index].likes + 1;
+    };
     DashboardComponent.prototype.ngOnInit = function () {
+        /* this.tripService.getTrips().subscribe(trips => {
+               this.trips = trips.trips;
+             },
+             err => {
+               console.log(err);
+               return false;
+             });;*/
     };
     DashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -341,11 +397,12 @@ var DashboardComponent = (function () {
             template: __webpack_require__(689),
             styles: [__webpack_require__(680)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], DashboardComponent);
     return DashboardComponent;
+    var _a, _b;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/dashboard.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/dashboard.component.js.map
 
 /***/ }),
 
@@ -380,7 +437,7 @@ var EditProfileComponent = (function () {
     ], EditProfileComponent);
     return EditProfileComponent;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/edit-profile.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/edit-profile.component.js.map
 
 /***/ }),
 
@@ -415,7 +472,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/home.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/home.component.js.map
 
 /***/ }),
 
@@ -425,7 +482,7 @@ var HomeComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
@@ -483,7 +540,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/login.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/login.component.js.map
 
 /***/ }),
 
@@ -493,7 +550,7 @@ var LoginComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarComponent; });
@@ -538,7 +595,7 @@ var NavbarComponent = (function () {
     return NavbarComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/navbar.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/navbar.component.js.map
 
 /***/ }),
 
@@ -548,7 +605,7 @@ var NavbarComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(55);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -587,7 +644,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/profile.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/profile.component.js.map
 
 /***/ }),
 
@@ -600,7 +657,7 @@ var ProfileComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(55);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -666,7 +723,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/register.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/register.component.js.map
 
 /***/ }),
 
@@ -675,7 +732,7 @@ var RegisterComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(80);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -711,7 +768,7 @@ var AuthGuard = (function () {
     return AuthGuard;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/auth.guard.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/auth.guard.js.map
 
 /***/ }),
 
@@ -727,7 +784,7 @@ var AuthGuard = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/environment.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/environment.js.map
 
 /***/ }),
 
@@ -748,7 +805,7 @@ module.exports = ""
 /***/ 680:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".trip {\n\n  width:100px;\n  hieght:200px;\n  background-color: #d1f2eb;\n  display: inline-block;\n  border-radius: 5px;\n  margin: 5px;\n\n}\n\n.rating {\n  background-color:  #5dade2 ;\n  border-radius: 50%;\n  text-align: center;\n\n  font-family: cursive;\n  height: 50px;\n  width: 50px;\n  margin: auto;\n}\n"
 
 /***/ }),
 
@@ -811,7 +868,7 @@ module.exports = "<h2 class=\"page-header\">Please enter trip details</h2>\n<for
 /***/ 689:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"onCliclSearch()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]>Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n    </div>\n</form>\n"
+module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"onCliclSearch()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]>Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n    </div>\n</form>\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <h6>Destination: </h6>\n        <p>{{trip.destination}}</p>\n        <h6>Date: </h6>\n        <p>{{trip.date}} </p>\n        <h6>Trip Name: </h6>\n        <p>{{trip.tripName}} </p>\n        <h6>Description: </h6>\n        <p>{{trip.description}} </p>\n      <div class=\"rating\" (click)=\"click(i)\">\n        <h6>Join</h6>\n      </div>\n    </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -941,7 +998,7 @@ var AuthService = (function () {
     return AuthService;
     var _a;
 }());
-//# sourceMappingURL=/home/nikdaminov/Imperial/TripanionMEAN/angular-src/src/auth.service.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/auth.service.js.map
 
 /***/ })
 
