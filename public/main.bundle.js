@@ -49,6 +49,15 @@ var TripService = (function () {
         return this.http.get('trips/trips')
             .map(function (res) { return res.json(); });
     };
+    TripService.prototype.getTripsByDestination = function (dest) {
+        //let headers = new Headers();
+        //this.loadToken();
+        //headers.append('Authorization', this.authToken);
+        //headers.append('Content-Type','application/json');
+        //return this.http.get('http://localhost:3000/users/profile',{headers: headers})
+        return this.http.get('trips/' + dest)
+            .map(function (res) { return res.json(); });
+    };
     TripService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === 'function' && _a) || Object])
@@ -95,34 +104,51 @@ var DashboardComponent = (function () {
         ;
     }
     /*trips = [{
-      destination: "adsd",
-      date: "dadsa",
-      tripName: "adsa",
-      description: "sda"
-    
-    },
-    {
-      destination: "dadsas",
-      date: "dadsa",
-      tripName: "dasds",
-      description: "dads"
-    }
-    ];*/
+     destination: "adsd",
+     date: "dadsa",
+     tripName: "adsa",
+     description: "sda"
+  
+     },
+     {
+     destination: "dadsas",
+     date: "dadsa",
+     tripName: "dasds",
+     description: "dads"
+     }
+     ];*/
     DashboardComponent.prototype.click = function (index) {
         //this.trips[index].likes = this.trips[index].likes + 1;
     };
     DashboardComponent.prototype.ngOnInit = function () {
         /* this.tripService.getTrips().subscribe(trips => {
-               this.trips = trips.trips;
-             },
-             err => {
-               console.log(err);
-               return false;
-             });;*/
+         this.trips = trips.trips;
+         },
+         err => {
+         console.log(err);
+         return false;
+         });;*/
     };
     DashboardComponent.prototype.joinTrip = function () {
     };
     DashboardComponent.prototype.searchTrips = function () {
+        var _this = this;
+        if (this.destination.valueOf() === "All Destination") {
+            console.log("All Destination");
+            this.tripService.getTrips().subscribe(function (trips) {
+                //  this.trips = trips.trips;
+                //},
+                //err => {
+                _this.trips = trips;
+                //return false;
+            });
+        }
+        else {
+            console.log(this.destination);
+            this.tripService.getTripsByDestination(this.destination).subscribe(function (trips) {
+                _this.trips = trips;
+            });
+        }
     };
     DashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -876,7 +902,7 @@ module.exports = "<h2 class=\"page-header\">Please enter trip details</h2>\n<for
 /***/ 689:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"searchTrips()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <div class=\"buttonHolder\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]>Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n        </div>\n    </div>\n</form>\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <h6>Destination: </h6>\n        <p>{{trip.destination}}</p>\n        <h6>Date: </h6>\n        <p>{{trip.date}} </p>\n        <h6>Trip Name: </h6>\n        <p>{{trip.tripName}} </p>\n        <h6>Description: </h6>\n        <p>{{trip.description}} </p>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] onclick=\"joinTrip()\">Join Trip</button>\n\n    </div>\n</div>\n\n"
+module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"searchTrips()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"All Destination\">All Destination</option>\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <div class=\"buttonHolder\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n        </div>\n    </div>\n</form>\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <h6>Destination: </h6>\n        <p>{{trip.destination}}</p>\n        <h6>Date: </h6>\n        <p>{{trip.date}} </p>\n        <h6>Trip Name: </h6>\n        <p>{{trip.tripName}} </p>\n        <h6>Description: </h6>\n        <p>{{trip.description}} </p>\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"joinTrip()\">Join Trip</button>\n\n    </div>\n</div>\n\n"
 
 /***/ }),
 

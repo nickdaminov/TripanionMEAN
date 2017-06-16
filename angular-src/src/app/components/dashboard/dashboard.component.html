@@ -3,6 +3,7 @@
     <div class="form-group">
         <label>Destination</label><br>
         <select [(ngModel)]="destination" name="destination" class="form-control">
+            <option value="All Destination">All Destination</option>
             <option value="Austria">Austria</option>
             <option value="Italy">Italy</option>
             <option value="Belgium">Belgium</option>
@@ -34,7 +35,7 @@
         </select>
 
         <div class="buttonHolder">
-        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions]>Search</button>
+        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="searchTrips()">Search</button>
         <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] [routerLink]="['/createTrip']">Create Trip</button>
         </div>
     </div>
@@ -49,7 +50,7 @@
         <p>{{trip.tripName}} </p>
         <h6>Description: </h6>
         <p>{{trip.description}} </p>
-        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] onclick="joinTrip()">Join Trip</button>
+        <button type="button" class="btn btn-default" onclick="joinTrip()">Join Trip</button>
 
     </div>
 </div>

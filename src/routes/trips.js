@@ -60,17 +60,239 @@ router.get('/trips', function(req, res, next){
     });
 });
 
-// Get Single Task
-/*router.get('/trip/:destination', function(req, res, next){
-
-    mongojs.
-    Trip.find({destination: mongojs.ObjectId(req.params.destination)}, function(err, trips) {
+// Get Single Ttrips
+router.get('/Lithuania', function(req, res, next){
+    Trip.find({destination: "Lithuania"}, function(err, trips) {
         if(err){
             res.send(err);
         }
-        res.json(task);
+        res.json(trips);
     });
-});*/
+});
+
+router.get('/Italy', function(req, res, next){
+    Trip.find({destination: "Italy"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Austria', function(req, res, next){
+    Trip.find({destination: "Austria"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Belgium', function(req, res, next){
+    Trip.find({destination: "Belgium"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Latvia', function(req, res, next){
+    Trip.find({destination: "Latvia"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Bulgaria', function(req, res, next){
+    Trip.find({destination: "Bulgaria"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Croatia', function(req, res, next){
+    Trip.find({destination: "Croatia"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Luxembourg', function(req, res, next){
+    Trip.find({destination: "Luxembourg"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Cyprus', function(req, res, next){
+    Trip.find({destination: "Cyprus"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Malta', function(req, res, next){
+    Trip.find({destination: "Malta"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Czech Republic', function(req, res, next){
+    Trip.find({destination: "Czech Republic"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Netherlands', function(req, res, next){
+    Trip.find({destination: "Netherlands"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Denmark', function(req, res, next){
+    Trip.find({destination: "Denmark"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Poland', function(req, res, next){
+    Trip.find({destination: "Poland"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Estonia', function(req, res, next){
+    Trip.find({destination: "Estonia"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Portugal', function(req, res, next){
+    Trip.find({destination: "Portugal"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Finland', function(req, res, next){
+    Trip.find({destination: "Finland"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Romania', function(req, res, next){
+    Trip.find({destination: "Romania"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/France', function(req, res, next){
+    Trip.find({destination: "France"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+
+router.get('/Slovakia', function(req, res, next){
+    Trip.find({destination: "Slovakia"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Germany', function(req, res, next){
+    Trip.find({destination: "Germany"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Slovenia', function(req, res, next){
+    Trip.find({destination: "Slovenia"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Greece', function(req, res, next){
+    Trip.find({destination: "Greece"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Spain', function(req, res, next){
+    Trip.find({destination: "Spain"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Hungary', function(req, res, next){
+    Trip.find({destination: "Hungary"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Sweden', function(req, res, next){
+    Trip.find({destination: "Sweden"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/Ireland', function(req, res, next){
+    Trip.find({destination: "Ireland"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
+router.get('/United Kingdom', function(req, res, next){
+    Trip.find({destination: "United Kingdom"}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(trips);
+    });
+});
 
 // Get All Trips
 /*router.get('/trip', function(req, res, next){
