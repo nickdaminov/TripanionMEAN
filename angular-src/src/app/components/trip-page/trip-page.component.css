@@ -1,0 +1,23 @@
+table {
+  border: 1px dotted blue;
+
+}
+
+.like {
+  width: 100px;
+  height: 60px;
+}
+
+.data {
+
+  font-size: 35px;
+  border-bottom: 1px solid violet;
+  text-align: center;
+}
+
+.title {
+
+  font-size: 35px;
+  border-bottom: 1px solid violet;
+
+}
