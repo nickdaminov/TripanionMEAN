@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
 import {TripService} from '../../services/trip.service'
 import {FlashMessagesService} from 'angular2-flash-messages';
+import {DashboardComponent} from '../dashboard/dashboard.component';
 
 
 @Component({
@@ -16,8 +17,7 @@ export class CreateTripComponent implements OnInit {
   tripName: String;
   description: String;
 
-  constructor(private tripService: TripService,  private flashMessage:FlashMessagesService, private router: Router) {
-  }
+  constructor(private tripService: TripService,  private flashMessage:FlashMessagesService, private router: Router, private dashboard: DashboardComponent) {}
 
   ngOnInit() {
   }
@@ -32,6 +32,7 @@ export class CreateTripComponent implements OnInit {
 
 
     this.tripService.createTrip(trip).subscribe(data => {
+      this.dashboard.trips.push(trip);
       if (data.success) {
         this.flashMessage.show('Trip Created', {cssClass: 'alert-success', timeout: 3000});
         this.router.navigate(['/dashboard']);

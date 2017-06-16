@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
+import {TripService} from "../../services/trip.service";
+import {Trips} from "./Trip";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,28 +11,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-destination:String;
-trips = [{
-destination:"dsds",
-likes:12,
-description:"vdv",
-going:12
-},
-{
-destination:"dsds",
-likes:12,
-going:12,
-description:"dsdgfg"
-}
-];
+  destination: String;
+  trips: Trips[];
 
-click(index) {
-  this.trips[index].likes = this.trips[index].likes + 1;
-}
-
-  constructor() { }
-
-  ngOnInit() {
+  click(index) {
+    //this.trips[index].likes = this.trips[index].likes + 1;
   }
 
+  constructor(private tripService: TripService, private router: Router) {
+    this.tripService.getTrips().subscribe(trips => {
+      //  this.trips = trips.trips;
+      //},
+      //err => {
+      this.trips = trips;
+      //return false;
+    });
+    ;
+  }
+
+  ngOnInit() {
+    /* this.tripService.getTrips().subscribe(trips => {
+     this.trips = trips.trips;
+     },
+     err => {
+     console.log(err);
+     return false;
+     });;*/
+  }
+
+  joinTrip() {
+
+  }
+
+  searchTrips() {
+    if (this.destination.valueOf() === "All Destination"){
+      console.log("All Destination");
+      this.tripService.getTrips().subscribe(trips => {
+        //  this.trips = trips.trips;
+        //},
+        //err => {
+        this.trips = trips;
+        //return false;
+      });
+    }else {
+      console.log(this.destination);
+      this.tripService.getTripsByDestination(this.destination).subscribe(trips => {
+        this.trips = trips;
+      })
+    }
+  }
 }
