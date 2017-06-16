@@ -52,5 +52,12 @@ click(index) {
           return false;
         });;*/
   }
+  joinTrip() {
+
+  }
+
+  searchTrips() {
+
+  }
 
 }

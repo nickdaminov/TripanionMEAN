@@ -60,6 +60,18 @@ router.get('/trips', function(req, res, next){
     });
 });
 
+// Get Single Task
+/*router.get('/trip/:destination', function(req, res, next){
+
+    mongojs.
+    Trip.find({destination: mongojs.ObjectId(req.params.destination)}, function(err, trips) {
+        if(err){
+            res.send(err);
+        }
+        res.json(task);
+    });
+});*/
+
 // Get All Trips
 /*router.get('/trip', function(req, res, next){
  db.tasks.find(function(err, tasks){

@@ -31,7 +31,11 @@ module.exports.getTrips = function(callback){
     Trip.find(callback);
 }
 
+module.exports.getTripsByD = function(destination,callback){
+    const query = {destination: destination};
 
+    Trip.find( {query , callback });
+}
 module.exports.getTripByTripName = function(tripName, callback){
     const query = {tripName: tripName}
     Trip.findOne(query, callback);
