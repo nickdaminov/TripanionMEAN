@@ -65,7 +65,7 @@ var TripService = (function () {
     return TripService;
     var _a;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/trip.service.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/trip.service.js.map
 
 /***/ }),
 
@@ -147,7 +147,7 @@ var DashboardComponent = (function () {
     return DashboardComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/dashboard.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/dashboard.component.js.map
 
 /***/ }),
 
@@ -188,7 +188,7 @@ var ValidateService = (function () {
     ], ValidateService);
     return ValidateService;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/validate.service.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/validate.service.js.map
 
 /***/ }),
 
@@ -223,7 +223,7 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/main.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/main.js.map
 
 /***/ }),
 
@@ -257,7 +257,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/app.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/app.component.js.map
 
 /***/ }),
 
@@ -357,7 +357,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/app.module.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/app.module.js.map
 
 /***/ }),
 
@@ -426,7 +426,7 @@ var CreateTripComponent = (function () {
     return CreateTripComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/create-trip.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/create-trip.component.js.map
 
 /***/ }),
 
@@ -461,7 +461,7 @@ var EditProfileComponent = (function () {
     ], EditProfileComponent);
     return EditProfileComponent;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/edit-profile.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/edit-profile.component.js.map
 
 /***/ }),
 
@@ -496,7 +496,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/home.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/home.component.js.map
 
 /***/ }),
 
@@ -564,7 +564,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/login.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/login.component.js.map
 
 /***/ }),
 
@@ -619,7 +619,7 @@ var NavbarComponent = (function () {
     return NavbarComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/navbar.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/navbar.component.js.map
 
 /***/ }),
 
@@ -668,7 +668,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/profile.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/profile.component.js.map
 
 /***/ }),
 
@@ -747,7 +747,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/register.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/register.component.js.map
 
 /***/ }),
 
@@ -791,7 +791,7 @@ var TripPageComponent = (function () {
     ], TripPageComponent);
     return TripPageComponent;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/trip-page.component.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/trip-page.component.js.map
 
 /***/ }),
 
@@ -836,7 +836,7 @@ var AuthGuard = (function () {
     return AuthGuard;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/auth.guard.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/auth.guard.js.map
 
 /***/ }),
 
@@ -852,7 +852,7 @@ var AuthGuard = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/environment.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/environment.js.map
 
 /***/ }),
 
@@ -922,7 +922,7 @@ module.exports = ""
 /***/ 688:
 /***/ (function(module, exports) {
 
-module.exports = "table {\n  border: 1px dotted blue;\n\n}\n\n.like {\n  width: 100px;\n  height: 60px;\n}\n\n.data {\n\n  font-size: 35px;\n  border-bottom: 1px solid violet;\n  text-align: center;\n}\n\n.title {\n\n  font-size: 35px;\n  border-bottom: 1px solid violet;\n\n}\n"
+module.exports = ".joinButton{\n  float:right;\n}\n\n.host{\n  background-color: hotpink;\n}\n\n.members{\n  background-color: mediumspringgreen;\n}\n"
 
 /***/ }),
 
@@ -943,7 +943,7 @@ module.exports = "<h2 class=\"page-header\">Please enter trip details</h2>\n<for
 /***/ 691:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"searchTrips()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"All Destination\">All Destination</option>\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <div class=\"buttonHolder\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n        </div>\n    </div>\n</form>\n\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <h6>Destination: </h6>\n        <p>{{trip.destination}}</p>\n        <h6>Date: </h6>\n        <p>{{trip.date}} </p>\n        <h6>Trip Name: </h6>\n        <p>{{trip.tripName}} </p>\n        <h6>Description: </h6>\n        <p>{{trip.description}} </p>\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"joinTrip()\">Join Trip</button>\n\n    </div>\n</div>\n"
+module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"searchTrips()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"All Destination\">All Destination</option>\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <div class=\"buttonHolder\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n        </div>\n    </div>\n</form>\n\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <h6>Destination: </h6>\n        <p>{{trip.destination}}</p>\n        <h6>Date: </h6>\n        <p>{{trip.date}} </p>\n        <h6>Trip Name: </h6>\n        <p>{{trip.tripName}} </p>\n        <h6>Description: </h6>\n        <p>{{trip.description}} </p>\n        <span style=\"display: inline;\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLink]=\"['/tripPage']\">View Infomation</button>\n        <button type=\"button\" class=\"btn btn-default\" onclick=\"joinTrip()\">Join Trip</button>\n        </span>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -992,7 +992,7 @@ module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRe
 /***/ 698:
 /***/ (function(module, exports) {
 
-module.exports = "  <table>\n    <thead>\n      <title>\n        <tr colspan=\"2\">\n          <th>Triproom</th>\n        </tr>\n      </title>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"title\">Destination</td>\n        <td class=\"data\">{{trip.destination}}</td>\n      </tr>\n      <tr>\n        <td class=\"title\">Going</td>\n        <td class=\"data\">{{trip.going}}<td>\n      </tr>\n      <tr>\n        <td class=\"title\">Description </td>\n        <td class=\"data\">{{trip.description}}</td>\n      </tr>\n      <tr>\n        <td class=\"title\">\n          <img class=\"like\" src=\"https://image.freepik.com/free-icon/thumbs-up-hand-symbol_318-41939.jpg\"\n            (click)=\"likes()\"\n          />\n        </td>\n        <td class=\"data\">{{trip.likes}}</td>\n      </tr>\n    </tbody>\n  </table>\n"
+module.exports = "<h2 class=\"page-header\">Name of a Trip</h2>\n\n<div> Destination, Date</div>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-8\">chat</div>\n    <div class=\"col-md-4\">memebers and host\n      <div class=\"host\">Host</div>\n      <div class=\"members\"> Members</div>\n    </div>\n  </div>\n\n  <br />\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <div>Description</div>\n    </div>\n\n    <div class=\"col-md-2\">\n      <div class=\"joinButton\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Join</button>\n      </div>\n    </div>\n\n\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1080,7 +1080,7 @@ var AuthService = (function () {
     return AuthService;
     var _a;
 }());
-//# sourceMappingURL=/home/amir/TripanionMEAN/angular-src/src/auth.service.js.map
+//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/auth.service.js.map
 
 /***/ })
 

@@ -1,23 +1,11 @@
-table {
-  border: 1px dotted blue;
-
+.joinButton{
+  float:right;
 }
 
-.like {
-  width: 100px;
-  height: 60px;
+.host{
+  background-color: hotpink;
 }
 
-.data {
-
-  font-size: 35px;
-  border-bottom: 1px solid violet;
-  text-align: center;
-}
-
-.title {
-
-  font-size: 35px;
-  border-bottom: 1px solid violet;
-
+.members{
+  background-color: mediumspringgreen;
 }

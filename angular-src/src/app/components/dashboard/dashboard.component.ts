@@ -44,7 +44,7 @@ export class DashboardComponent implements OnInit {
   }
 
   searchTrips() {
-    if (this.destination.valueOf() === "All Destination"){
+    if (this.destination.valueOf() === "All Destination") {
       console.log("All Destination");
       this.tripService.getTrips().subscribe(trips => {
         //  this.trips = trips.trips;
@@ -53,7 +53,7 @@ export class DashboardComponent implements OnInit {
         this.trips = trips;
         //return false;
       });
-    }else {
+    } else {
       console.log(this.destination);
       this.tripService.getTripsByDestination(this.destination).subscribe(trips => {
         this.trips = trips;
