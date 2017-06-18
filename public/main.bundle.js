@@ -65,7 +65,7 @@ var TripService = (function () {
     return TripService;
     var _a;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/trip.service.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/trip.service.js.map
 
 /***/ }),
 
@@ -147,7 +147,7 @@ var DashboardComponent = (function () {
     return DashboardComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/dashboard.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/dashboard.component.js.map
 
 /***/ }),
 
@@ -171,7 +171,7 @@ var ValidateService = (function () {
     function ValidateService() {
     }
     ValidateService.prototype.validateRegister = function (user) {
-        if (user.name == undefined || user.email == undefined || user.username == undefined || user.password == undefined) {
+        if (user.name == undefined || user.email == undefined || user.username == undefined || user.password == undefined || user.nationality == undefined) {
             return false;
         }
         else {
@@ -188,7 +188,7 @@ var ValidateService = (function () {
     ], ValidateService);
     return ValidateService;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/validate.service.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/validate.service.js.map
 
 /***/ }),
 
@@ -223,7 +223,7 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/main.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/main.js.map
 
 /***/ }),
 
@@ -257,7 +257,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/app.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/app.component.js.map
 
 /***/ }),
 
@@ -357,7 +357,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/app.module.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/app.module.js.map
 
 /***/ }),
 
@@ -426,7 +426,7 @@ var CreateTripComponent = (function () {
     return CreateTripComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/create-trip.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/create-trip.component.js.map
 
 /***/ }),
 
@@ -461,7 +461,7 @@ var EditProfileComponent = (function () {
     ], EditProfileComponent);
     return EditProfileComponent;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/edit-profile.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/edit-profile.component.js.map
 
 /***/ }),
 
@@ -496,7 +496,7 @@ var HomeComponent = (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/home.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/home.component.js.map
 
 /***/ }),
 
@@ -564,7 +564,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/login.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/login.component.js.map
 
 /***/ }),
 
@@ -619,7 +619,7 @@ var NavbarComponent = (function () {
     return NavbarComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/navbar.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/navbar.component.js.map
 
 /***/ }),
 
@@ -668,7 +668,7 @@ var ProfileComponent = (function () {
     return ProfileComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/profile.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/profile.component.js.map
 
 /***/ }),
 
@@ -712,7 +712,8 @@ var RegisterComponent = (function () {
             name: this.name,
             email: this.email,
             username: this.username,
-            password: this.password
+            password: this.password,
+            nationality: this.nationality
         };
         // Required Fields
         if (!this.validateService.validateRegister(user)) {
@@ -747,7 +748,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/register.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/register.component.js.map
 
 /***/ }),
 
@@ -791,7 +792,7 @@ var TripPageComponent = (function () {
     ], TripPageComponent);
     return TripPageComponent;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/trip-page.component.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/trip-page.component.js.map
 
 /***/ }),
 
@@ -836,7 +837,7 @@ var AuthGuard = (function () {
     return AuthGuard;
     var _a, _b;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/auth.guard.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/auth.guard.js.map
 
 /***/ }),
 
@@ -852,7 +853,7 @@ var AuthGuard = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/environment.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/environment.js.map
 
 /***/ }),
 
@@ -978,14 +979,14 @@ module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"contai
 /***/ 696:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n"
+module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n    <li class=\"list-group-item\">Nationality: {{user.nationality}}</li>\n  </ul>\n</div>\n"
 
 /***/ }),
 
 /***/ 697:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Nationality</label>\n    <select [(ngModel)]=\"nationality\" name=\"nationality\" class=\"form-control\">\n      <option value=\"\">-- select one --</option>\n      <option value=\"afghan\">Afghan</option>\n      <option value=\"albanian\">Albanian</option>\n      <option value=\"algerian\">Algerian</option>\n      <option value=\"american\">American</option>\n      <option value=\"andorran\">Andorran</option>\n      <option value=\"angolan\">Angolan</option>\n      <option value=\"antiguans\">Antiguans</option>\n      <option value=\"argentinean\">Argentinean</option>\n      <option value=\"armenian\">Armenian</option>\n      <option value=\"australian\">Australian</option>\n      <option value=\"austrian\">Austrian</option>\n      <option value=\"azerbaijani\">Azerbaijani</option>\n      <option value=\"bahamian\">Bahamian</option>\n      <option value=\"bahraini\">Bahraini</option>\n      <option value=\"bangladeshi\">Bangladeshi</option>\n      <option value=\"barbadian\">Barbadian</option>\n      <option value=\"barbudans\">Barbudans</option>\n      <option value=\"batswana\">Batswana</option>\n      <option value=\"belarusian\">Belarusian</option>\n      <option value=\"belgian\">Belgian</option>\n      <option value=\"belizean\">Belizean</option>\n      <option value=\"beninese\">Beninese</option>\n      <option value=\"bhutanese\">Bhutanese</option>\n      <option value=\"bolivian\">Bolivian</option>\n      <option value=\"bosnian\">Bosnian</option>\n      <option value=\"brazilian\">Brazilian</option>\n      <option value=\"british\">British</option>\n      <option value=\"bruneian\">Bruneian</option>\n      <option value=\"bulgarian\">Bulgarian</option>\n      <option value=\"burkinabe\">Burkinabe</option>\n      <option value=\"burmese\">Burmese</option>\n      <option value=\"burundian\">Burundian</option>\n      <option value=\"cambodian\">Cambodian</option>\n      <option value=\"cameroonian\">Cameroonian</option>\n      <option value=\"canadian\">Canadian</option>\n      <option value=\"cape verdean\">Cape Verdean</option>\n      <option value=\"central african\">Central African</option>\n      <option value=\"chadian\">Chadian</option>\n      <option value=\"chilean\">Chilean</option>\n      <option value=\"chinese\">Chinese</option>\n      <option value=\"colombian\">Colombian</option>\n      <option value=\"comoran\">Comoran</option>\n      <option value=\"congolese\">Congolese</option>\n      <option value=\"costa rican\">Costa Rican</option>\n      <option value=\"croatian\">Croatian</option>\n      <option value=\"cuban\">Cuban</option>\n      <option value=\"cypriot\">Cypriot</option>\n      <option value=\"czech\">Czech</option>\n      <option value=\"danish\">Danish</option>\n      <option value=\"djibouti\">Djibouti</option>\n      <option value=\"dominican\">Dominican</option>\n      <option value=\"dutch\">Dutch</option>\n      <option value=\"east timorese\">East Timorese</option>\n      <option value=\"ecuadorean\">Ecuadorean</option>\n      <option value=\"egyptian\">Egyptian</option>\n      <option value=\"emirian\">Emirian</option>\n      <option value=\"equatorial guinean\">Equatorial Guinean</option>\n      <option value=\"eritrean\">Eritrean</option>\n      <option value=\"estonian\">Estonian</option>\n      <option value=\"ethiopian\">Ethiopian</option>\n      <option value=\"fijian\">Fijian</option>\n      <option value=\"filipino\">Filipino</option>\n      <option value=\"finnish\">Finnish</option>\n      <option value=\"french\">French</option>\n      <option value=\"gabonese\">Gabonese</option>\n      <option value=\"gambian\">Gambian</option>\n      <option value=\"georgian\">Georgian</option>\n      <option value=\"german\">German</option>\n      <option value=\"ghanaian\">Ghanaian</option>\n      <option value=\"greek\">Greek</option>\n      <option value=\"grenadian\">Grenadian</option>\n      <option value=\"guatemalan\">Guatemalan</option>\n      <option value=\"guinea-bissauan\">Guinea-Bissauan</option>\n      <option value=\"guinean\">Guinean</option>\n      <option value=\"guyanese\">Guyanese</option>\n      <option value=\"haitian\">Haitian</option>\n      <option value=\"herzegovinian\">Herzegovinian</option>\n      <option value=\"honduran\">Honduran</option>\n      <option value=\"hungarian\">Hungarian</option>\n      <option value=\"icelander\">Icelander</option>\n      <option value=\"indian\">Indian</option>\n      <option value=\"indonesian\">Indonesian</option>\n      <option value=\"iranian\">Iranian</option>\n      <option value=\"iraqi\">Iraqi</option>\n      <option value=\"irish\">Irish</option>\n      <option value=\"israeli\">Israeli</option>\n      <option value=\"italian\">Italian</option>\n      <option value=\"ivorian\">Ivorian</option>\n      <option value=\"jamaican\">Jamaican</option>\n      <option value=\"japanese\">Japanese</option>\n      <option value=\"jordanian\">Jordanian</option>\n      <option value=\"kazakhstani\">Kazakhstani</option>\n      <option value=\"kenyan\">Kenyan</option>\n      <option value=\"kittian and nevisian\">Kittian and Nevisian</option>\n      <option value=\"kuwaiti\">Kuwaiti</option>\n      <option value=\"kyrgyz\">Kyrgyz</option>\n      <option value=\"laotian\">Laotian</option>\n      <option value=\"latvian\">Latvian</option>\n      <option value=\"lebanese\">Lebanese</option>\n      <option value=\"liberian\">Liberian</option>\n      <option value=\"libyan\">Libyan</option>\n      <option value=\"liechtensteiner\">Liechtensteiner</option>\n      <option value=\"lithuanian\">Lithuanian</option>\n      <option value=\"luxembourger\">Luxembourger</option>\n      <option value=\"macedonian\">Macedonian</option>\n      <option value=\"malagasy\">Malagasy</option>\n      <option value=\"malawian\">Malawian</option>\n      <option value=\"malaysian\">Malaysian</option>\n      <option value=\"maldivan\">Maldivan</option>\n      <option value=\"malian\">Malian</option>\n      <option value=\"maltese\">Maltese</option>\n      <option value=\"marshallese\">Marshallese</option>\n      <option value=\"mauritanian\">Mauritanian</option>\n      <option value=\"mauritian\">Mauritian</option>\n      <option value=\"mexican\">Mexican</option>\n      <option value=\"micronesian\">Micronesian</option>\n      <option value=\"moldovan\">Moldovan</option>\n      <option value=\"monacan\">Monacan</option>\n      <option value=\"mongolian\">Mongolian</option>\n      <option value=\"moroccan\">Moroccan</option>\n      <option value=\"mosotho\">Mosotho</option>\n      <option value=\"motswana\">Motswana</option>\n      <option value=\"mozambican\">Mozambican</option>\n      <option value=\"namibian\">Namibian</option>\n      <option value=\"nauruan\">Nauruan</option>\n      <option value=\"nepalese\">Nepalese</option>\n      <option value=\"new zealander\">New Zealander</option>\n      <option value=\"ni-vanuatu\">Ni-Vanuatu</option>\n      <option value=\"nicaraguan\">Nicaraguan</option>\n      <option value=\"nigerien\">Nigerien</option>\n      <option value=\"north korean\">North Korean</option>\n      <option value=\"northern irish\">Northern Irish</option>\n      <option value=\"norwegian\">Norwegian</option>\n      <option value=\"omani\">Omani</option>\n      <option value=\"pakistani\">Pakistani</option>\n      <option value=\"palauan\">Palauan</option>\n      <option value=\"panamanian\">Panamanian</option>\n      <option value=\"papua new guinean\">Papua New Guinean</option>\n      <option value=\"paraguayan\">Paraguayan</option>\n      <option value=\"peruvian\">Peruvian</option>\n      <option value=\"polish\">Polish</option>\n      <option value=\"portuguese\">Portuguese</option>\n      <option value=\"qatari\">Qatari</option>\n      <option value=\"romanian\">Romanian</option>\n      <option value=\"russian\">Russian</option>\n      <option value=\"rwandan\">Rwandan</option>\n      <option value=\"saint lucian\">Saint Lucian</option>\n      <option value=\"salvadoran\">Salvadoran</option>\n      <option value=\"samoan\">Samoan</option>\n      <option value=\"san marinese\">San Marinese</option>\n      <option value=\"sao tomean\">Sao Tomean</option>\n      <option value=\"saudi\">Saudi</option>\n      <option value=\"scottish\">Scottish</option>\n      <option value=\"senegalese\">Senegalese</option>\n      <option value=\"serbian\">Serbian</option>\n      <option value=\"seychellois\">Seychellois</option>\n      <option value=\"sierra leonean\">Sierra Leonean</option>\n      <option value=\"singaporean\">Singaporean</option>\n      <option value=\"slovakian\">Slovakian</option>\n      <option value=\"slovenian\">Slovenian</option>\n      <option value=\"solomon islander\">Solomon Islander</option>\n      <option value=\"somali\">Somali</option>\n      <option value=\"south african\">South African</option>\n      <option value=\"south korean\">South Korean</option>\n      <option value=\"spanish\">Spanish</option>\n      <option value=\"sri lankan\">Sri Lankan</option>\n      <option value=\"sudanese\">Sudanese</option>\n      <option value=\"surinamer\">Surinamer</option>\n      <option value=\"swazi\">Swazi</option>\n      <option value=\"swedish\">Swedish</option>\n      <option value=\"swiss\">Swiss</option>\n      <option value=\"syrian\">Syrian</option>\n      <option value=\"taiwanese\">Taiwanese</option>\n      <option value=\"tajik\">Tajik</option>\n      <option value=\"tanzanian\">Tanzanian</option>\n      <option value=\"thai\">Thai</option>\n      <option value=\"togolese\">Togolese</option>\n      <option value=\"tongan\">Tongan</option>\n      <option value=\"trinidadian or tobagonian\">Trinidadian or Tobagonian</option>\n      <option value=\"tunisian\">Tunisian</option>\n      <option value=\"turkish\">Turkish</option>\n      <option value=\"tuvaluan\">Tuvaluan</option>\n      <option value=\"ugandan\">Ugandan</option>\n      <option value=\"ukrainian\">Ukrainian</option>\n      <option value=\"uruguayan\">Uruguayan</option>\n      <option value=\"uzbekistani\">Uzbekistani</option>\n      <option value=\"venezuelan\">Venezuelan</option>\n      <option value=\"vietnamese\">Vietnamese</option>\n      <option value=\"welsh\">Welsh</option>\n      <option value=\"yemenite\">Yemenite</option>\n      <option value=\"zambian\">Zambian</option>\n      <option value=\"zimbabwean\">Zimbabwean</option>\n    </select>\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n"
 
 /***/ }),
 
@@ -1080,7 +1081,7 @@ var AuthService = (function () {
     return AuthService;
     var _a;
 }());
-//# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/auth.service.js.map
+//# sourceMappingURL=/Users/zuyvu/TripanionMEAN/angular-src/src/auth.service.js.map
 
 /***/ })
 
