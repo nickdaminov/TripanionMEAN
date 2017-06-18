@@ -23,4 +23,11 @@ export class ValidateService {
     return true;
   }
 
+  validateNationality(nationality){
+    if(nationality !== "") return false;
+  }
+
+  validateCountryOfResident(country){
+    if(country !== "") return false;
+  }
 }

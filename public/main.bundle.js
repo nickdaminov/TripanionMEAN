@@ -186,6 +186,14 @@ var ValidateService = (function () {
         //Have no requirement yet
         return true;
     };
+    ValidateService.prototype.validateNationality = function (nationality) {
+        if (nationality !== "")
+            return false;
+    };
+    ValidateService.prototype.validateCountryOfResident = function (country) {
+        if (country !== "")
+            return false;
+    };
     ValidateService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
         __metadata('design:paramtypes', [])
@@ -720,25 +728,39 @@ var RegisterComponent = (function () {
             nationality: this.nationality,
             countryOfResident: this.countryOfResident
         };
+        var containsError = false;
         // Required Fields
         if (!this.validateService.validateRegister(user)) {
             this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
+            containsError = true;
         }
         // Validate Email
         if (!this.validateService.validateEmail(user.email)) {
             this.flashMessage.show('Please use a valid email', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
+            containsError = true;
         }
         //Validate Password
         if (user.password !== this.repassword) {
             this.flashMessage.show('Passwords do not match', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
+            containsError = true;
         }
         if (!this.validateService.validatePassword(user.password)) {
             this.flashMessage.show('Please use a valid password', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
+            containsError = true;
         }
+        // Validate Nationality
+        if (!this.validateService.validateNationality(user.nationality)) {
+            this.flashMessage.show('Please choose your Nationality', { cssClass: 'alert-danger', timeout: 3000 });
+            containsError = true;
+        }
+        // Validate Country Of Resident
+        if (!this.validateService.validateCountryOfResident(user.nationality)) {
+            this.flashMessage.show('Please choose your Country Of Resident', { cssClass: 'alert-danger', timeout: 3000 });
+            containsError = true;
+        }
+        // If any error occured, stop here
+        if (containsError == true)
+            return false;
         // Register user
         this.authService.registerUser(user).subscribe(function (data) {
             if (data.success) {
