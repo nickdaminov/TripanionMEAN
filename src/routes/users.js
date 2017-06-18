@@ -12,7 +12,8 @@ router.post('/register', (req, res, next) => {
         email: req.body.email,
         username: req.body.username,
         password: req.body.password,
-        nationality: req.body.nationality
+        nationality: req.body.nationality,
+        countryOfResident: req.body.countryOfResident
     });
 
     User.addUser(newUser, (err, user) => {
@@ -50,7 +51,8 @@ router.post('/authenticate', (req, res, next) => {
                         name: user.name,
                         username: user.username,
                         email: user.email,
-                        nationality: user.nationality
+                        nationality: user.nationality,
+                        countryOfResident: user.countryOfResident
                     }
                 });
             } else {

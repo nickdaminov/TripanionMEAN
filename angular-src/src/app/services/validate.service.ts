@@ -18,4 +18,9 @@ export class ValidateService {
     return re.test(email);
   }
 
+  validatePassword(password){
+    //Have no requirement yet
+    return true;
+  }
+
 }

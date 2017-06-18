@@ -23,6 +23,10 @@ const UserSchema = mongoose.Schema({
     nationality: {
         type: String,
         required: true
+    },
+    countryOfResident: {
+        type: String,
+        required: true
     }
 });
 
