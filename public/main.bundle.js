@@ -187,12 +187,20 @@ var ValidateService = (function () {
         return true;
     };
     ValidateService.prototype.validateNationality = function (nationality) {
-        if (nationality !== "")
+        if (nationality === "") {
             return false;
+        }
+        else {
+            return true;
+        }
     };
     ValidateService.prototype.validateCountryOfResident = function (country) {
-        if (country !== "")
+        if (country === "") {
             return false;
+        }
+        else {
+            return true;
+        }
     };
     ValidateService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
@@ -1015,7 +1023,7 @@ module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"contai
 /***/ 696:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n    <li class=\"list-group-item\">Nationality: {{user.nationality}}</li>\n  </ul>\n</div>\n"
+module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n    <li class=\"list-group-item\">Nationality: {{user.nationality}}</li>\n  </ul>\n</div>\n\n<div *ngIf=\"user\">\n<!-- Page Container -->\n<!-- <div class=\"w3-content w3-margin-top\" style=\"max-width:1400px;\"> -->\n\n  <!-- The Grid -->\n  <!-- <div class=\"w3-row-padding\"> -->\n\n    <!-- Left Column -->\n    <div class=\"w3-third\">\n      <div class=\"w3-white w3-text-grey w3-card-4\">\n        <div class=\"w3-display-container\">\n          <img src=\"../../../assets/images/logo.png\" style=\"width:100%\" alt=\"Avatar\">\n          <div class=\"w3-display-bottomleft w3-container w3-text-black\">\n            <h2>Jane Doe</h2>\n          </div>\n        </div>\n        <div class=\"w3-container\">\n         <p><i class=\"fa fa-briefcase fa-fw w3-margin-right w3-large \"></i>Username: {{user.username}}</p>\n         <p><i class=\"fa fa-home fa-fw w3-margin-right w3-large w3-text-teal\"></i>Email: {{user.email}}</p>\n         <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal\"></i>Nationality: {{user.nationality}}</p>\n         <hr>\n       </div>\n     </div>\n     <br>\n<!-- End Left Column -->\n    </div>\n<!-- End Grid -->\n  <!-- </div> -->\n<!-- End Page Container -->\n<!-- </div> -->\n\n</div>\n"
 
 /***/ }),
 

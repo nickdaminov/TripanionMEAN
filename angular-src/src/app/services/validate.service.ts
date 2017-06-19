@@ -24,10 +24,18 @@ export class ValidateService {
   }
 
   validateNationality(nationality){
-    if(nationality !== "") return false;
+    if(nationality === ""){
+      return false;
+    } else {
+      return true;
+    }
   }
 
   validateCountryOfResident(country){
-    if(country !== "") return false;
+    if(country === ""){
+      return false;
+    } else {
+      return true;
+    }
   }
 }
