@@ -4,6 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
+const mongojs = require('mongojs');
 
 // Register
 router.post('/register', (req, res, next) => {
@@ -66,5 +67,47 @@ router.post('/authenticate', (req, res, next) => {
 router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
     res.json({user: req.user});
 });
+
+router.put('/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+    var user = req.body;
+
+    if(!user){
+        res.status(400);
+        res.json({
+            "error":"Bad Data"
+        });
+    } else {
+        User.update({_id: mongojs.ObjectId(req.params.id)},user, {}, function(err, user_new){
+            if(err){
+                res.send(err);
+            }
+            console.log("here");
+            res.json(user_new);
+        });
+    }
+});
+
+// =====================================
+// PROCESS UPDATE PROFILE=======================
+// =====================================
+// process the update profile form
+// router.get('/editProfile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+    // let updateUser = new User({
+    //     name: req.body.name,
+    //     email: req.body.email,
+    //     username: req.body.username,
+    //     password: req.body.password,
+    //     nationality: req.body.nationality,
+    //     countryOfResident: req.body.countryOfResident
+    // });
+    // res.json({user: req.user});
+    // User.updateUser(updateUser, (err, user) => {
+    //   if(err){
+    //     res.json({success: false, msg:'Failed to update user details'});
+    //   } else {
+    //     res.json({success: true, msg:'User details updated'});
+    //   }
+    // });
+// });
 
 module.exports = router;
