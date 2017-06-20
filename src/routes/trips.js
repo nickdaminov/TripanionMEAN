@@ -31,24 +31,46 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const Trip = require('../models/trip');
+const mongojs = require('mongojs');
 
-// Register
-router.post('/createTrip', (req, res, next) => {
-    let newTrip = new Trip({
-        destination: req.body.destination,
-        date: req.body.date,
-        tripName: req.body.tripName,
-        description: req.body.description
+// Update Trip
+//router.get('/trip/:id', function(req, res, next){
+//    var member = req.body.member;
+//    var id = req.body.id;
+    /*var updTrip = {};
+
+    if(trip.isDone){
+        updTrip.isDone = task.isDone;
+    }
+
+    if(trip.name){
+        updTrip.name = trip.name;
+    }
+
+    if(!updTrip){
+        res.status(400);
+        res.json({
+            "error":"Bad Data"
+        });
+    } else {*/
+        //Trip.update({_id: mongojs.ObjectId(id)},{$push:{members: member}}, {}, function(err, task){
+       //     if(err){
+     //           res.send(err);
+   //         }
+ //           res.json(trip);
+//        });
+    //}
+//});
+// Get Single Trip
+router.get('/trip/:id', function(req, res, next){
+
+    Trip.findOne({_id: mongojs.ObjectId(req.params.id)}, function(err, trip){
+        if(err){
+            res.send(err);
+        }
+        res.json(trip);
     });
-
-Trip.addTrip(newTrip, (err, user) => {
-    if(err){
-        res.json({success: false, msg:'Failed to create the trip'});
-    } else {
-        res.json({success: true, msg:'Trip created'});
-}
 });
-})
 
 // Get All Trips
 router.get('/trips', function(req, res, next){
@@ -59,6 +81,39 @@ router.get('/trips', function(req, res, next){
         res.json(trips);
     });
 });
+
+
+// Delete Task
+router.delete('/trip/:id', function(req, res, next){
+    Trip.remove({_id: mongojs.ObjectId(req.params.id)}, function(err, trip){
+        if(err){
+            res.send(err);
+        }
+        res.json(trip);
+    });
+});
+
+
+
+// Register
+router.post('/createTrip', (req, res, next) => {
+    let newTrip = new Trip({
+        destination: req.body.destination,
+        date: req.body.date,
+        tripName: req.body.tripName,
+        description: req.body.description,
+        host: req.body.host,
+        members:[req.body.host]
+    });
+
+Trip.addTrip(newTrip, (err, user) => {
+    if(err){
+        res.json({success: false, msg:'Failed to create the trip'});
+    } else {
+        res.json({success: true, msg:'Trip created'});
+}
+});
+})
 
 // Get Single Ttrips
 router.get('/Lithuania', function(req, res, next){
@@ -294,6 +349,56 @@ router.get('/United Kingdom', function(req, res, next){
     });
 });
 
+
+
+// Update Trip
+router.put('/trip/:id', function(req, res, next){
+    var trip = req.body;
+    var updTrip = {};
+
+    if(trip._id){
+        updTrip._id = trip._id;
+    }
+
+   if(trip.destination){
+        updTrip.destination = trip.destination;
+    }
+    if(trip.date){
+        updTrip.date = trip.date;
+    }
+    if(trip.tripName){
+        updTrip.tripName = trip.tripName;
+    }
+    if(trip.description){
+        updTrip.description = trip.description;
+    }
+    if(trip.host){
+        updTrip.host = trip.host;
+    }
+    if(trip.members){
+        updTrip.members = trip.members;
+    }
+    console.log(trip);
+
+    console.log(updTrip);
+
+
+
+    if(!updTrip){
+        res.status(400);
+        res.json({
+            "error":"Bad Data"
+        });
+    } else {
+        Trip.update({_id: mongojs.ObjectId(req.params.id)},updTrip, {}, function(err, trip){
+            if(err){
+                res.send(err);
+            }
+            console.log("here");
+            res.json(trip);
+        });
+    }
+});
 // Get All Trips
 /*router.get('/trip', function(req, res, next){
  db.tasks.find(function(err, tasks){

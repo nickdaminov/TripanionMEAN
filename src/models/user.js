@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const config = require('../config/database');
+const Trip = require('./trip');
 
 // User Schema
 const UserSchema = mongoose.Schema({
@@ -19,6 +20,10 @@ const UserSchema = mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    trips : {
+        type: [String],
+        required: false
     }
 });
 

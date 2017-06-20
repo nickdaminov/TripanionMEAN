@@ -3,4 +3,5 @@ export class Trips{
     date: String;
     tripName: String;
     description: String;
+    members:[String];
 }

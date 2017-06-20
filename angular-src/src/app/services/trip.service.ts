@@ -70,4 +70,15 @@ export class TripService {
         this.user = null;
         localStorage.clear();
     }*/
+    addMember(trip) {
+        console.log("in addMem");
+        console.log(trip);
+        let headers = new Headers();
+        headers.append('Content-Type','application/json');
+        console.log("beforeput");
+
+        //return this.http.post('http://localhost:3000/users/register', user,{headers: headers})
+        return this.http.put('trips/trip/'+trip._id, JSON.stringify(trip),{headers: headers})
+            .map(res => res.json());
+    }
 }

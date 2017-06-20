@@ -3,6 +3,8 @@ import {Router} from '@angular/router'
 import {TripService} from '../../services/trip.service'
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {DashboardComponent} from '../dashboard/dashboard.component';
+import {AuthService} from '../../services/auth.service';
+
 
 
 @Component({
@@ -16,10 +18,22 @@ export class CreateTripComponent implements OnInit {
   date: String;
   tripName: String;
   description: String;
+  host: String;
+  user: Object;
+  members:[String];
 
-  constructor(private tripService: TripService,  private flashMessage:FlashMessagesService, private router: Router, private dashboard: DashboardComponent) {}
+  constructor(private tripService: TripService,  private flashMessage:FlashMessagesService, private router: Router, private dashboard: DashboardComponent, private authService:AuthService) {}
 
   ngOnInit() {
+    this.authService.getProfile().subscribe(profile => {
+          this.user = profile.user;
+          this.host = profile.user.username;
+          this.members = [this.host];
+        },
+        err => {
+          console.log(err);
+          return false;
+        });
   }
 
   onCreationSubmit() {
@@ -27,7 +41,9 @@ export class CreateTripComponent implements OnInit {
       destination: this.destination,
       date: this.date,
       tripName: this.tripName,
-      description: this.description
+      description: this.description,
+      host: this.host,
+      members: this.members
     }
 
 

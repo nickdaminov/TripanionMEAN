@@ -18,6 +18,14 @@ const TripSchema = mongoose.Schema({
     description: {
         type: String,
         required: true
+    },
+    host: {
+        type: String,
+        required: true
+    },
+    members: {
+        type: [String],
+        required: true
     }
 });
 
