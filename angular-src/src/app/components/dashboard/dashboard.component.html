@@ -52,8 +52,8 @@
         <h6>Description: </h6>
         <p>{{trip.description}} </p>
         <span style="display: inline;">
-        <button type="button" class="btn btn-default" [routerLink]="['/tripPage']">View Infomation</button>
-        <button type="button" class="btn btn-default" onclick="joinTrip()">Join Trip</button>
+        <button type="button" class="btn btn-default" (click)="tripInfo()" [routerLink]="['/tripPage']">View Infomation</button>
+        <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>
         </span>
 
     </div>
