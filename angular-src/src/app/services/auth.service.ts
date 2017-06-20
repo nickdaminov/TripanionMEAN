@@ -23,14 +23,10 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type','application/json');
-    //return this.http.post('http://localhost:3000/users/register', user,{headers: headers})
-    // return this.http.post('users/editProfile', user,{headers: headers})
-    // return this.http.get('users/editProfile',{headers: headers})
-    //     .map(res => res.json());
 
     return this.http.put('users/'+user._id, JSON.stringify(user),{headers: headers})
-        .map(res => res.json());
 
+        .map(res => res.json());
   }
 
   authenticateUser(user){

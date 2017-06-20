@@ -11,26 +11,12 @@ import {Router} from '@angular/router'
 })
 export class EditProfileComponent implements OnInit {
   user:any;
-  // name: String;
-  // username: String;
-  // email: String;
-  // password: String;
-  // repassword: String;
-  // nationality: String;
-  // countryOfResident: String;
 
   constructor(private validateService: ValidateService, private flashMessage:FlashMessagesService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
       this.authService.getProfile().subscribe(profile => {
           this.user = profile.user;
-              // this.name = profile.user.name;
-              // this.username = profile.user.username;
-              // this.email = profile.user.email;
-              // this.password = profile.user.password;
-              // this.repassword = profile.user.password;
-              // this.nationality = profile.user.nationality;
-              // this.countryOfResident = profile.user.countryOfResident;
           },
           err => {
               console.log(err);
@@ -40,14 +26,6 @@ export class EditProfileComponent implements OnInit {
 
   onUpdateSubmit(){
 
-    // const user = {
-    //   name: this.name,
-    //   email: this.email,
-    //   username: this.username,
-    //   password: this.password,
-    //   nationality: this.nationality,
-    //   countryOfResident: this.countryOfResident
-    // }
     var containsError = false;
     // Required Fields
     if(!this.validateService.validateRegister(this.user)){
@@ -82,10 +60,8 @@ export class EditProfileComponent implements OnInit {
       this.flashMessage.show('Please choose your Country Of Resident', {cssClass: 'alert-danger', timeout: 3000});
       containsError = true;
     }
-    console.log("hello2");
     // If any error occured, stop here
     if(containsError == true) return false;
-    console.log("hello3");
     // update user
     this.authService.updateUser(this.user).subscribe(data => {
       if(data){
@@ -94,10 +70,8 @@ export class EditProfileComponent implements OnInit {
       } else {
         this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
         this.router.navigate(['/editProfile']);
-        console.log("hello7");
       }
     });
-    console.log("hello4");
   }
 
 
