@@ -43,41 +43,24 @@
 
     <!-- Right Column -->
     <div class="w3-twothird">
-
       <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Your Upcoming Trip</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>To Hanoi</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Some description of the trip here :D yo yeah yeah.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>To London</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-          <p>Go study at Imperial College London :D Damn.</p>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Your Upcoming Trip {{currentDate}}</h2>
+
+        <div class="w3-container" *ngFor="let trip of upcomingTrips | orderBy : 'date'">
+          <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date}}</h6>
+          <p>{{trip.description}}</p>
           <hr>
         </div>
       </div>
 
       <div class="w3-container w3-card-2 w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-check fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Your Past Trip</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>An Old Trip here</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Time here</h6>
-          <p>Old Memories</p>
+        <div class="w3-container" *ngFor="let trip of pastTrips | orderBy : '-date'">
+          <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date}}</h6>
+          <p>{{trip.description}}</p>
           <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>An Old Trip here</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Time here</h6>
-          <p>Old Memories</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>An Old Trip here</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Time here</h6>
-          <p>Old Memories</p>
         </div>
       </div>
 

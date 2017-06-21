@@ -27,6 +27,17 @@ export class TripService {
             .map(res => res.json());
     }*/
 
+    getATrip(trip_id){
+          //let headers = new Headers();
+          //this.loadToken();
+          //headers.append('Authorization', this.authToken);
+          //headers.append('Content-Type','application/json');
+          //return this.http.get('http://localhost:3000/users/profile',{headers: headers})
+          return this.http.get('trips/trip' + trip_id)
+
+              .map(res => res.json());
+      }
+
   getTrips(){
         //let headers = new Headers();
         //this.loadToken();
