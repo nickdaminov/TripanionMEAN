@@ -1,4 +1,8 @@
+
+
 <h2 class="page-header">Trip Room</h2>
+
+
 <form (submit)="searchTrips()">
     <div class="form-group">
         <label>Destination</label><br>
@@ -43,18 +47,68 @@
 
 <div class="trips">
     <div class="trip" *ngFor="let trip of trips; let i = index">
-        <h6>Destination: </h6>
-        <p>{{trip.destination}}</p>
-        <h6>Date: </h6>
-        <p>{{trip.date}} </p>
-        <h6>Trip Name: </h6>
-        <p>{{trip.tripName}} </p>
-        <h6>Description: </h6>
-        <p>{{trip.description}} </p>
-        <span style="display: inline;">
-        <button type="button" class="btn btn-default" (click)="tripInfo()" [routerLink]="['/tripPage']">View Infomation</button>
+        <form (submit)="tripInfo()">
+
+
+            <h6>Destination: </h6>
+            <p>{{trip.destination}}</p>
+            <h6>Date: </h6>
+            <p>{{trip.date}} </p>
+            <h6>Trip Name: </h6>
+            <p>{{trip.tripName}} </p>
+            <h6>Description: </h6>
+            <p>{{trip.description}} </p>
+
+                <modal #modal>
+                    <modal-header [show-close]="true">
+                        <h2 class="modal-title">{{trip.tripName}}</h2>
+                    </modal-header>
+                    <modal-body>
+
+                        <div class="container">
+
+                            <div> Destination {{trip.destination}}, Date</div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="container">chat</div>
+                                </div>
+                                <div class="col-md-4" >members and host
+                                    <div class="host">Host : {{trip.host}}
+                                        <div class="members"> Members :
+                                            <div  *ngFor="let member of trip.members; let i = index">
+                                                <div>
+                                                    {{member}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div>Description : {{trip.description}}</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </modal-body>
+                    <modal-footer>
+                        <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
+                        <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
+                    </modal-footer>                </modal>
+            <span style="display: inline;">
+        <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
         <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>
         </span>
+
+
+        </form>
+
 
     </div>
 </div>

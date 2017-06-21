@@ -21,6 +21,11 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { CreateTripComponent } from './components/create-trip/create-trip.component';
 import {TripService} from './services/trip.service';
 
+import { ModalModule } from 'ng2-modal-dialog/modal.module';
+//import { TripPageComponent} from './components/trip-page/trip-page.component';
+
+//import { NgModule } from '@angular/core';
+import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
@@ -51,9 +56,10 @@ const appRoutes: Routes =  [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    FlashMessagesModule
+    FlashMessagesModule,
+    Ng2Bs3ModalModule
   ],
-  providers: [ValidateService, AuthService, AuthGuard, TripService, DashboardComponent],
+  providers: [ValidateService, AuthService, AuthGuard, TripService, DashboardComponent, TripPageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

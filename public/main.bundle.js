@@ -1,12 +1,12 @@
 webpackJsonp([1,4],{
 
-/***/ 222:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(374);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(245);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TripService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -98,15 +98,15 @@ var TripService = (function () {
 
 /***/ }),
 
-/***/ 334:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_trip_service__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_trip_service__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -181,7 +181,24 @@ var DashboardComponent = (function () {
              }*/
         });
     };
-    DashboardComponent.prototype.tripInfo = function (trip) {
+    DashboardComponent.prototype.tripInfo = function () {
+        //this.tripPage.setTrip(trip)/*.subscribe(data => {
+        //if (data.success) {
+        //    this.flashMessage.show('Got Trip', {cssClass: 'alert-success', timeout: 3000});
+        //} else {
+        //    this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
+        // this.router.navigate(['/createTrip']);
+        //}
+        //});*/
+        var trip = {
+            destination: this.destination,
+            date: this.date,
+            tripName: this.tripName,
+            description: this.description,
+            host: this.host,
+            members: this.members
+        };
+        return this.trip;
     };
     DashboardComponent.prototype.searchTrips = function () {
         var _this = this;
@@ -206,8 +223,8 @@ var DashboardComponent = (function () {
     DashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dashboard',
-            template: __webpack_require__(691),
-            styles: [__webpack_require__(681)]
+            template: __webpack_require__(699),
+            styles: [__webpack_require__(689)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_trip_service__["a" /* TripService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_trip_service__["a" /* TripService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _d) || Object])
     ], DashboardComponent);
@@ -218,7 +235,7 @@ var DashboardComponent = (function () {
 
 /***/ }),
 
-/***/ 335:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -259,7 +276,7 @@ var ValidateService = (function () {
 
 /***/ }),
 
-/***/ 391:
+/***/ 397:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -268,20 +285,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 391;
+webpackEmptyContext.id = 397;
 
 
 /***/ }),
 
-/***/ 392:
+/***/ 398:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(479);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(485);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(520);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(510);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(526);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(516);
 
 
 
@@ -294,7 +311,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 509:
+/***/ 515:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -317,8 +334,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(689),
-            styles: [__webpack_require__(679)]
+            template: __webpack_require__(697),
+            styles: [__webpack_require__(687)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -328,31 +345,33 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 510:
+/***/ 516:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(470);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(509);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__(515);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__ = __webpack_require__(514);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__ = __webpack_require__(517);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__ = __webpack_require__(513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__ = __webpack_require__(516);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_trip_page_trip_page_component__ = __webpack_require__(518);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_validate_service__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(515);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__(521);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__ = __webpack_require__(520);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__ = __webpack_require__(523);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__ = __webpack_require__(519);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__ = __webpack_require__(522);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_trip_page_trip_page_component__ = __webpack_require__(524);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_validate_service__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_auth_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__ = __webpack_require__(519);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_edit_profile_edit_profile_component__ = __webpack_require__(512);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_create_trip_create_trip_component__ = __webpack_require__(511);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_trip_service__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__ = __webpack_require__(525);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_edit_profile_edit_profile_component__ = __webpack_require__(518);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_create_trip_create_trip_component__ = __webpack_require__(517);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_trip_service__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_bs3_modal_ng2_bs3_modal__ = __webpack_require__(685);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_bs3_modal_ng2_bs3_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_ng2_bs3_modal_ng2_bs3_modal__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -363,6 +382,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -415,9 +435,10 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__["FlashMessagesModule"]
+                __WEBPACK_IMPORTED_MODULE_15_angular2_flash_messages__["FlashMessagesModule"],
+                __WEBPACK_IMPORTED_MODULE_20_ng2_bs3_modal_ng2_bs3_modal__["Ng2Bs3ModalModule"]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_13__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_14__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_19__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_13__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_14__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_16__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_19__services_trip_service__["a" /* TripService */], __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_12__components_trip_page_trip_page_component__["a" /* TripPageComponent */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
@@ -428,16 +449,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 511:
+/***/ 517:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_trip_service__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_dashboard_component__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_dashboard_component__ = __webpack_require__(338);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_auth_service__ = __webpack_require__(56);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateTripComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -499,8 +520,8 @@ var CreateTripComponent = (function () {
     CreateTripComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-create-trip',
-            template: __webpack_require__(690),
-            styles: [__webpack_require__(680)]
+            template: __webpack_require__(698),
+            styles: [__webpack_require__(688)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_trip_service__["a" /* TripService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__dashboard_dashboard_component__["a" /* DashboardComponent */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__dashboard_dashboard_component__["a" /* DashboardComponent */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_auth_service__["a" /* AuthService */]) === 'function' && _e) || Object])
     ], CreateTripComponent);
@@ -511,7 +532,7 @@ var CreateTripComponent = (function () {
 
 /***/ }),
 
-/***/ 512:
+/***/ 518:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -535,8 +556,8 @@ var EditProfileComponent = (function () {
     EditProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-edit-profile',
-            template: __webpack_require__(692),
-            styles: [__webpack_require__(682)]
+            template: __webpack_require__(700),
+            styles: [__webpack_require__(690)]
         }), 
         __metadata('design:paramtypes', [])
     ], EditProfileComponent);
@@ -546,7 +567,7 @@ var EditProfileComponent = (function () {
 
 /***/ }),
 
-/***/ 513:
+/***/ 519:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -570,8 +591,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
-            template: __webpack_require__(693),
-            styles: [__webpack_require__(683)]
+            template: __webpack_require__(701),
+            styles: [__webpack_require__(691)]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
@@ -581,14 +602,14 @@ var HomeComponent = (function () {
 
 /***/ }),
 
-/***/ 514:
+/***/ 520:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -637,8 +658,8 @@ var LoginComponent = (function () {
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-login',
-            template: __webpack_require__(694),
-            styles: [__webpack_require__(684)]
+            template: __webpack_require__(702),
+            styles: [__webpack_require__(692)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _c) || Object])
     ], LoginComponent);
@@ -649,14 +670,14 @@ var LoginComponent = (function () {
 
 /***/ }),
 
-/***/ 515:
+/***/ 521:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -692,8 +713,8 @@ var NavbarComponent = (function () {
     NavbarComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navbar',
-            template: __webpack_require__(695),
-            styles: [__webpack_require__(685)]
+            template: __webpack_require__(703),
+            styles: [__webpack_require__(693)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _c) || Object])
     ], NavbarComponent);
@@ -704,13 +725,13 @@ var NavbarComponent = (function () {
 
 /***/ }),
 
-/***/ 516:
+/***/ 522:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(40);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -741,8 +762,8 @@ var ProfileComponent = (function () {
     ProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-profile',
-            template: __webpack_require__(696),
-            styles: [__webpack_require__(686)]
+            template: __webpack_require__(704),
+            styles: [__webpack_require__(694)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], ProfileComponent);
@@ -753,16 +774,16 @@ var ProfileComponent = (function () {
 
 /***/ }),
 
-/***/ 517:
+/***/ 523:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(40);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -820,8 +841,8 @@ var RegisterComponent = (function () {
     RegisterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(697),
-            styles: [__webpack_require__(687)]
+            template: __webpack_require__(705),
+            styles: [__webpack_require__(695)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */]) === 'function' && _d) || Object])
     ], RegisterComponent);
@@ -832,11 +853,12 @@ var RegisterComponent = (function () {
 
 /***/ }),
 
-/***/ 518:
+/***/ 524:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(40);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TripPageComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -848,40 +870,78 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TripPageComponent = (function () {
-    function TripPageComponent() {
-        this.trip = {
-            destination: "Paris",
-            likes: 12,
-            description: "Lots of FUn",
-            going: 12
-        };
+    /* trip = {
+       destination:"Paris",
+       likes:12,
+       description:"Lots of FUn",
+       going:12
+     };
+   
+   
+     likes() {
+       this.trip.likes = this.trip.likes + 1;
+     }*/
+    /* trip = {
+     destination: "",
+     date: "",
+     tripName: "",
+     description: "",
+     host: "",
+     members: []
+   }*/
+    function TripPageComponent(router) {
+        this.router = router;
     }
-    TripPageComponent.prototype.likes = function () {
-        this.trip.likes = this.trip.likes + 1;
-    };
     TripPageComponent.prototype.ngOnInit = function () {
+        /*this.dashboard.tripInfo().subscribe(trip => {
+    
+              console.log(trip);
+              this.trip = trip;
+            },
+            err => {
+              console.log(err);
+              return false;
+            });*/
+    };
+    TripPageComponent.prototype.setTrip = function (trip) {
+        this.trip = trip;
+        this.trip.destination = trip.destination;
+        this.trip.date = trip.date;
+        this.trip.tripName = trip.tripName;
+        this.trip.destination = trip.destination;
+        this.trip.host = trip.host;
+        this.trip.members = trip.members;
+        console.log("get trip");
+        console.log(this.trip);
+        this.router.navigate(['/tripPage']);
+        return trip;
+    };
+    TripPageComponent.prototype.onCancel = function () {
+        this.closeModal();
     };
     TripPageComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-trip-page',
-            template: __webpack_require__(698),
-            styles: [__webpack_require__(688)]
+            template: __webpack_require__(706),
+            styles: [__webpack_require__(696)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object])
     ], TripPageComponent);
     return TripPageComponent;
+    var _a;
 }());
 //# sourceMappingURL=/home/bomanan/TripanionMEAN/angular-src/src/trip-page.component.js.map
 
 /***/ }),
 
-/***/ 519:
+/***/ 525:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__(56);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -921,7 +981,7 @@ var AuthGuard = (function () {
 
 /***/ }),
 
-/***/ 520:
+/***/ 526:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -942,10 +1002,10 @@ var environment = {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(374);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(245);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__(525);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__(531);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1017,62 +1077,6 @@ var AuthService = (function () {
 
 /***/ }),
 
-/***/ 679:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 680:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 681:
-/***/ (function(module, exports) {
-
-module.exports = ".trip {\n\n  width:300px;\n  hieght:400px;\n  background-color: #d1f2eb;\n  display: inline-block;\n  border-radius: 5px;\n  margin: 5px;\n\n}\n\n\n\n.rating {\n  background-color:  #5dade2 ;\n  border-radius: 50%;\n  text-align: center;\n\n  font-family: cursive;\n  height: 50px;\n  width: 50px;\n  float: right;\n}\n\n.buttonHolder{\n  text-align: center;\n}\n"
-
-/***/ }),
-
-/***/ 682:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 683:
-/***/ (function(module, exports) {
-
-module.exports = ".jumbotron{\n    color: lightseagreen;\n}"
-
-/***/ }),
-
-/***/ 684:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 685:
-/***/ (function(module, exports) {
-
-module.exports = ".navbar{\n    background-color: #44edc0;\n}"
-
-/***/ }),
-
-/***/ 686:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 687:
 /***/ (function(module, exports) {
 
@@ -1083,87 +1087,143 @@ module.exports = ""
 /***/ 688:
 /***/ (function(module, exports) {
 
-module.exports = ".joinButton{\n  float:right;\n}\n\n.host{\n  background-color: hotpink;\n}\n\n.members{\n  background-color: mediumspringgreen;\n}\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 689:
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\n<div class=\"container\">\n  <flash-messages></flash-messages>\n  <router-outlet></router-outlet>\n</div>"
+module.exports = ".trip {\n\n  width:300px;\n  hieght:400px;\n  background-color: #d1f2eb;\n  display: inline-block;\n  border-radius: 5px;\n  margin: 5px;\n\n}\n\n\n\n.rating {\n  background-color:  #5dade2 ;\n  border-radius: 50%;\n  text-align: center;\n\n  font-family: cursive;\n  height: 50px;\n  width: 50px;\n  float: right;\n}\n\n.buttonHolder{\n  text-align: center;\n}\n\n.joinButton{\n  float:right;\n}\n\n.host{\n  background-color: hotpink;\n}\n\n.members{\n  background-color: mediumspringgreen;\n}\n\n"
 
 /***/ }),
 
 /***/ 690:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Please enter trip details</h2>\n<form (submit)=\"onCreationSubmit()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n            <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n                <option value=\"Austria\">Austria</option>\n                <option value=\"Italy\">Italy</option>\n                <option value=\"Belgium\">Belgium</option>\n                <option value=\"Latvia\">Latvia</option>\n                <option value=\"Bulgaria\">Bulgaria</option>\n                <option value=\"Lithuania\">Lithuania</option>\n                <option value=\"Croatia\">Croatia</option>\n                <option value=\"Luxembourg\">Luxembourg</option>\n                <option value=\"Cyprus\">Cyprus</option>\n                <option value=\"Malta\">Malta</option>\n                <option value=\"Czech Republic\">Czech Republic</option>\n                <option value=\"Netherlands\">Netherlands</option>\n                <option value=\"Denmark\">Denmark</option>\n                <option value=\"Poland\">Poland</option>\n                <option value=\"Estonia\">Estonia</option>\n                <option value=\"Portugal\">Portugal</option>\n                <option value=\"Finland\">Finland</option>\n                <option value=\"Romania\">Romania</option>\n                <option value=\"France\">France</option>\n                <option value=\"Slovakia\">Slovakia</option>\n                <option value=\"Germany\">Germany</option>\n                <option value=\"Slovenia\">Slovenia</option>\n                <option value=\"Greece\">Greece</option>\n                <option value=\"Spain\">Spain</option>\n                <option value=\"Hungary\">Hungary</option>\n                <option value=\"Sweden\">Sweden</option>\n                <option value=\"Ireland\">Ireland</option>\n                <option value=\"United Kingdom\">United Kingdom</option>\n            </select>\n    </div>\n\n    <div class=\"form-group\">\n    <label>Trip date (in the format of dd/mm/yyyy)</label><br>\n    <input type=\"date\" [(ngModel)]=\"date\" name=\"date\" class=\"form-control\" >\n</div>\n\n    <!-- Host username is added -->\n    <!-- Members will be added later (as usernames as well) -->\n\n    <div class=\"form-group\">\n    <label>Trip name</label><br>\n    <input type=\"text\" [(ngModel)]=\"tripName\" name=\"tripName\" class=\"form-control\" >\n</div>\n\n    <div class=\"form-group\">\n    <label>Destination city and trip description</label><br>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\" >\n</div>\n\n    <input type=\"submit\" class=\"btn btn-default\" value=\"Create\">\n</form>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 691:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Trip Room</h2>\n<form (submit)=\"searchTrips()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"All Destination\">All Destination</option>\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <div class=\"buttonHolder\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n        </div>\n    </div>\n</form>\n\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <h6>Destination: </h6>\n        <p>{{trip.destination}}</p>\n        <h6>Date: </h6>\n        <p>{{trip.date}} </p>\n        <h6>Trip Name: </h6>\n        <p>{{trip.tripName}} </p>\n        <h6>Description: </h6>\n        <p>{{trip.description}} </p>\n        <span style=\"display: inline;\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"tripInfo()\" [routerLink]=\"['/tripPage']\">View Infomation</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"joinTrip(trip)\">Join Trip</button>\n        </span>\n\n    </div>\n</div>\n"
+module.exports = ".jumbotron{\n    color: lightseagreen;\n}"
 
 /***/ }),
 
 /***/ 692:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  edit-profile works!\n</p>\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 693:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Tripanion</h1>\n  <p class=\"lead\">Don't have friends to go on a trip with? Don't worry, you'll find some here</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n\n"
+module.exports = ".navbar{\n    background-color: #44edc0;\n}"
 
 /***/ }),
 
 /***/ 694:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>"
+module.exports = ""
 
 /***/ }),
 
 /***/ 695:
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">Tripanion</a>\n    </div>\n    <div id=\"navbar\" class=\"collapse navbar-collapse\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard']\">Trip Search</a></li>\n        <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/profile']\">Profile</a></li>\n        <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/login']\">Login</a></li>\n        <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li>\n        <li *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n      </ul>\n\n    </div><!--/.navbar-collapse -->\n  </div>\n</nav>\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 696:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n"
+module.exports = ".joinButton{\n  float:right;\n}\n\n.host{\n  background-color: hotpink;\n}\n\n.members{\n  background-color: mediumspringgreen;\n}\n"
 
 /***/ }),
 
 /***/ 697:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"container\">\n  <flash-messages></flash-messages>\n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
 /***/ 698:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Name of a Trip</h2>\n\n\n<div class=\"container\">\n\n  <div> Destination, Date</div>\n\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <div class=\"container\">chat</div>\n    </div>\n    <div class=\"col-md-4\">members and host\n      <div class=\"host\">Host</div>\n      <div class=\"members\"> Members</div>\n    </div>\n  </div>\n\n  <br />\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <div>Description</div>\n    </div>\n\n    <div class=\"col-md-2\">\n      <div class=\"joinButton\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Join</button>\n      </div>\n    </div>\n\n\n  </div>\n\n</div>\n"
+module.exports = "<h2 class=\"page-header\">Please enter trip details</h2>\n<form (submit)=\"onCreationSubmit()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n            <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n                <option value=\"Austria\">Austria</option>\n                <option value=\"Italy\">Italy</option>\n                <option value=\"Belgium\">Belgium</option>\n                <option value=\"Latvia\">Latvia</option>\n                <option value=\"Bulgaria\">Bulgaria</option>\n                <option value=\"Lithuania\">Lithuania</option>\n                <option value=\"Croatia\">Croatia</option>\n                <option value=\"Luxembourg\">Luxembourg</option>\n                <option value=\"Cyprus\">Cyprus</option>\n                <option value=\"Malta\">Malta</option>\n                <option value=\"Czech Republic\">Czech Republic</option>\n                <option value=\"Netherlands\">Netherlands</option>\n                <option value=\"Denmark\">Denmark</option>\n                <option value=\"Poland\">Poland</option>\n                <option value=\"Estonia\">Estonia</option>\n                <option value=\"Portugal\">Portugal</option>\n                <option value=\"Finland\">Finland</option>\n                <option value=\"Romania\">Romania</option>\n                <option value=\"France\">France</option>\n                <option value=\"Slovakia\">Slovakia</option>\n                <option value=\"Germany\">Germany</option>\n                <option value=\"Slovenia\">Slovenia</option>\n                <option value=\"Greece\">Greece</option>\n                <option value=\"Spain\">Spain</option>\n                <option value=\"Hungary\">Hungary</option>\n                <option value=\"Sweden\">Sweden</option>\n                <option value=\"Ireland\">Ireland</option>\n                <option value=\"United Kingdom\">United Kingdom</option>\n            </select>\n    </div>\n\n    <div class=\"form-group\">\n    <label>Trip date (in the format of dd/mm/yyyy)</label><br>\n    <input type=\"date\" [(ngModel)]=\"date\" name=\"date\" class=\"form-control\" >\n</div>\n\n    <!-- Host username is added -->\n    <!-- Members will be added later (as usernames as well) -->\n\n    <div class=\"form-group\">\n    <label>Trip name</label><br>\n    <input type=\"text\" [(ngModel)]=\"tripName\" name=\"tripName\" class=\"form-control\" >\n</div>\n\n    <div class=\"form-group\">\n    <label>Destination city and trip description</label><br>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\" >\n</div>\n\n    <input type=\"submit\" class=\"btn btn-default\" value=\"Create\">\n</form>"
 
 /***/ }),
 
-/***/ 721:
+/***/ 699:
+/***/ (function(module, exports) {
+
+module.exports = "\n\n<h2 class=\"page-header\">Trip Room</h2>\n\n\n<form (submit)=\"searchTrips()\">\n    <div class=\"form-group\">\n        <label>Destination</label><br>\n        <select [(ngModel)]=\"destination\" name=\"destination\" class=\"form-control\">\n            <option value=\"All Destination\">All Destination</option>\n            <option value=\"Austria\">Austria</option>\n            <option value=\"Italy\">Italy</option>\n            <option value=\"Belgium\">Belgium</option>\n            <option value=\"Latvia\">Latvia</option>\n            <option value=\"Bulgaria\">Bulgaria</option>\n            <option value=\"Lithuania\">Lithuania</option>\n            <option value=\"Croatia\">Croatia</option>\n            <option value=\"Luxembourg\">Luxembourg</option>\n            <option value=\"Cyprus\">Cyprus</option>\n            <option value=\"Malta\">Malta</option>\n            <option value=\"Czech Republic\">Czech Republic</option>\n            <option value=\"Netherlands\">Netherlands</option>\n            <option value=\"Denmark\">Denmark</option>\n            <option value=\"Poland\">Poland</option>\n            <option value=\"Estonia\">Estonia</option>\n            <option value=\"Portugal\">Portugal</option>\n            <option value=\"Finland\">Finland</option>\n            <option value=\"Romania\">Romania</option>\n            <option value=\"France\">France</option>\n            <option value=\"Slovakia\">Slovakia</option>\n            <option value=\"Germany\">Germany</option>\n            <option value=\"Slovenia\">Slovenia</option>\n            <option value=\"Greece\">Greece</option>\n            <option value=\"Spain\">Spain</option>\n            <option value=\"Hungary\">Hungary</option>\n            <option value=\"Sweden\">Sweden</option>\n            <option value=\"Ireland\">Ireland</option>\n            <option value=\"United Kingdom\">United Kingdom</option>\n        </select>\n\n        <div class=\"buttonHolder\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Search</button>\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] [routerLink]=\"['/createTrip']\">Create Trip</button>\n        </div>\n    </div>\n</form>\n\n<div class=\"trips\">\n    <div class=\"trip\" *ngFor=\"let trip of trips; let i = index\">\n        <form (submit)=\"tripInfo()\">\n\n\n            <h6>Destination: </h6>\n            <p>{{trip.destination}}</p>\n            <h6>Date: </h6>\n            <p>{{trip.date}} </p>\n            <h6>Trip Name: </h6>\n            <p>{{trip.tripName}} </p>\n            <h6>Description: </h6>\n            <p>{{trip.description}} </p>\n\n                <modal #modal>\n                    <modal-header [show-close]=\"true\">\n                        <h2 class=\"modal-title\">{{trip.tripName}}</h2>\n                    </modal-header>\n                    <modal-body>\n\n                        <div class=\"container\">\n\n                            <div> Destination {{trip.destination}}, Date</div>\n\n                            <div class=\"row\">\n                                <div class=\"col-md-8\">\n                                    <div class=\"container\">chat</div>\n                                </div>\n                                <div class=\"col-md-4\" >members and host\n                                    <div class=\"host\">Host : {{trip.host}}\n                                        <div class=\"members\"> Members :\n                                            <div  *ngFor=\"let member of trip.members; let i = index\">\n                                                <div>\n                                                    {{member}}\n                                                </div>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </div>\n\n                                <br />\n                                <div class=\"row\">\n                                    <div class=\"col-md-10\">\n                                        <div>Description : {{trip.description}}</div>\n                                    </div>\n\n                                </div>\n\n                            </div>\n                        </div>\n\n                    </modal-body>\n                    <modal-footer>\n                        <button type=\"button\" class=\"btn btn-primary\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"joinTrip(trip)\">Join</button>\n                        <button type=\"button\" class=\"btn btn-default\" (click)=\"modal.close()\">Ok</button>\n                    </modal-footer>                </modal>\n            <span style=\"display: inline;\">\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"modal.open('lg')\">View Infomation</button>\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"joinTrip(trip)\">Join Trip</button>\n        </span>\n\n\n        </form>\n\n\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ 700:
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  edit-profile works!\n</p>\n"
+
+/***/ }),
+
+/***/ 701:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Tripanion</h1>\n  <p class=\"lead\">Don't have friends to go on a trip with? Don't worry, you'll find some here</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ 702:
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>"
+
+/***/ }),
+
+/***/ 703:
+/***/ (function(module, exports) {
+
+module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"container\">\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"#\">Tripanion</a>\n    </div>\n    <div id=\"navbar\" class=\"collapse navbar-collapse\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard']\">Trip Search</a></li>\n        <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/profile']\">Profile</a></li>\n        <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/login']\">Login</a></li>\n        <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Register</a></li>\n        <li *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n      </ul>\n\n    </div><!--/.navbar-collapse -->\n  </div>\n</nav>\n"
+
+/***/ }),
+
+/***/ 704:
+/***/ (function(module, exports) {
+
+module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n"
+
+/***/ }),
+
+/***/ 705:
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+
+/***/ }),
+
+/***/ 706:
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Name of a Trip</h2>\n\n\n<div class=\"container\">\n\n  <div> Destination {{trip.destination}}, Date</div>\n\n  <div class=\"row\">\n    <div class=\"col-md-8\">\n      <div class=\"container\">chat</div>\n    </div>\n    <div class=\"col-md-4\" >members and host\n      <div class=\"host\">Host\n      <div class=\"members\"> Members\n        <div  *ngFor=\"let member of trip.members; let i = index\">\n          <div>\n            {{member}}\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <br />\n  <div class=\"row\">\n    <div class=\"col-md-10\">\n      <div>Description</div>\n    </div>\n\n    <div class=\"col-md-2\">\n      <div class=\"joinButton\">\n        <button type=\"button\" class=\"btn btn-default\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] (click)=\"searchTrips()\">Join</button>\n      </div>\n    </div>\n\n\n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ 731:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(392);
+module.exports = __webpack_require__(398);
 
 
 /***/ })
 
-},[721]);
+},[731]);
 //# sourceMappingURL=main.bundle.map
