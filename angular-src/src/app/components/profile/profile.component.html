@@ -1,13 +1,3 @@
-
-<!-- <div *ngIf="user">
-  <h2 class="page-header">{{user.name}}</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Username: {{user.username}}</li>
-    <li class="list-group-item">Email: {{user.email}}</li>
-    <li class="list-group-item">Nationality: {{user.nationality}}</li>
-  </ul>
-</div> -->
-
 <div *ngIf="user">
 <!-- Page Container -->
 <!-- <div class="w3-content w3-margin-top" style="max-width:1400px;"> -->
@@ -48,17 +38,17 @@
 
         <div class="w3-container" *ngFor="let trip of upcomingTrips | orderBy : 'date'">
           <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date}}</h6>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date | date : "EEEE, d MMMM, y" }}</h6>
           <p>{{trip.description}}</p>
           <hr>
         </div>
       </div>
 
-      <div class="w3-container w3-card-2 w3-white">
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-check fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Your Past Trip</h2>
         <div class="w3-container" *ngFor="let trip of pastTrips | orderBy : '-date'">
           <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date}}</h6>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date | date : "EEEE, d MMMM, y"}}</h6>
           <p>{{trip.description}}</p>
           <hr>
         </div>

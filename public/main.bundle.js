@@ -937,15 +937,8 @@ var ProfileComponent = (function () {
             return false;
         });
         this.tripService.getTrips().subscribe(function (trips) {
-            //  this.trips = trips.trips;
-            //},
-            //err => {
             _this.trips = trips;
-            //return false;
-            // this.initTrips(this.user, this.trips);
-            console.log(_this.user);
-            console.log(_this.trips);
-            console.log("hello2");
+            //Initialse Trips
             _this.pastTrips = [];
             _this.upcomingTrips = [];
             var currentDate = new Date().toISOString().slice(0, 10);
@@ -963,42 +956,9 @@ var ProfileComponent = (function () {
                     }
                 }
             }
-            console.log(_this.upcomingTrips);
         });
-        // }
-        // constructor(private authService:AuthService, private tripService: TripService, private flashMessage:FlashMessagesService, private router:Router) {
     }
     ProfileComponent.prototype.ngOnInit = function () {
-        console.log("Hello1");
-    };
-    ProfileComponent.prototype.initTrips = function (user, trips) {
-        console.log("HELLO 1" + this.user);
-        console.log("HELLO 2" + this.trips);
-        var trip_i;
-        // for (trip_i in this.user.trips) {
-        // this.tripService.getATrip(this.user.trips[trip_id]).subscribe(trip => {
-        //  this.trips = trips.trips;
-        //},
-        //err => {
-        // this.trips.push(trip.trip);
-        //return false;
-        // });
-        // console.log("HELLO " + this.user.trips[trip_i]);
-        // }
-        var currentDate = new Date().toISOString().slice(0, 10);
-        for (trip_i in trips) {
-            var member_i;
-            for (member_i in trips[trip_i].members) {
-                if (trips[trip_i].members[member_i] === user.username) {
-                    if (trips[trip_i].date > currentDate) {
-                        this.upcomingTrips.push(trips[trip_i]);
-                    }
-                    else {
-                        this.pastTrips.push(trips[trip_i]);
-                    }
-                }
-            }
-        }
     };
     ProfileComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1455,7 +1415,7 @@ module.exports = "<h2 class=\"page-header\">Edit You Profile</h2>\n<div *ngIf=\"
 /***/ 694:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>Tripanion</h1>\n  <p class=\"lead\">Don't have friends to go on a trip with? Don't worry, you'll find some here</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"w3-display-container\" style=\"margin-bottom:50px\">\n  <img src=\"/w3images/beach3.jpg\" style=\"width:100%\">\n   <div class=\"jumbotron text-center\">\n     <h1>Tripanion</h1>\n     <p class=\"lead\">Don't have friends to go on a trip with? Don't worry, you'll find some here</p>\n     <div>\n       <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n     </div>\n   </div>\n</div>\n"
 
 /***/ }),
 
@@ -1476,7 +1436,7 @@ module.exports = "\n<nav class=\"navbar navbar-default\">\n  <div class=\"contai
 /***/ 697:
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- <div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n    <li class=\"list-group-item\">Nationality: {{user.nationality}}</li>\n  </ul>\n</div> -->\n\n<div *ngIf=\"user\">\n<!-- Page Container -->\n<!-- <div class=\"w3-content w3-margin-top\" style=\"max-width:1400px;\"> -->\n\n  <!-- The Grid -->\n  <div class=\"w3-row-padding\">\n\n    <!-- Left Column -->\n    <div class=\"w3-third\">\n      <div class=\"w3-white w3-text-grey w3-card-4\">\n        <div class=\"w3-display-container\">\n          <img src=\"../../../assets/images/logo.png\" style=\"width:100%\" alt=\"Avatar\">\n          <div class=\"w3-display-bottomleft w3-container w3-text-black\">\n            <h2 class=\"w3-text-white\">{{user.name}}</h2>\n          </div>\n        </div>\n        <br>\n        <div class=\"w3-container\" style=\"padding-top:10\">\n         <p><i class=\"fa fa-user fa-fw w3-margin-right w3-large w3-text-teal\"></i>Name: <b>{{user.name}}</b></p>\n         <p><i class=\"fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal\"></i>Username: <b>{{user.username}}</b></p>\n         <p class=\"capitalize\"><i class=\"fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal\"></i>Nationality: <b>{{user.nationality}}</b></p>\n         <p class=\"capitalize\"><i class=\"fa fa-home fa-fw w3-margin-right w3-large w3-text-teal\"></i>Country Of Resident: <b>{{user.countryOfResident}}</b></p>\n         <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal\"></i>Email: <b>{{user.email}}</b></p>\n         <hr>\n         <button type=\"button\" class=\"btn btn-default\" [routerLink]=\"['/editProfile']\">Edit You Information</button>\n         <!-- <button type=\"button\" class=\"btn btn-default\" [routerLink]=\"['/tripPage']\">Change you Password</button> -->\n         <p style=\"padding-bottom:10px\">\n       </div>\n     </div>\n     <br>\n<!-- End Left Column -->\n    </div>\n\n    <!-- Right Column -->\n    <div class=\"w3-twothird\">\n      <div class=\"w3-container w3-card-2 w3-white w3-margin-bottom\">\n        <h2 class=\"w3-text-grey w3-padding-16\"><i class=\"fa fa-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal\"></i>Your Upcoming Trip {{currentDate}}</h2>\n\n        <div class=\"w3-container\" *ngFor=\"let trip of upcomingTrips | orderBy : 'date'\">\n          <h5 class=\"w3-opacity\"><b>To {{trip.destination}}</b></h5>\n          <h6 class=\"w3-text-teal\"><i class=\"fa fa-calendar fa-fw w3-margin-right\"></i>{{trip.date}}</h6>\n          <p>{{trip.description}}</p>\n          <hr>\n        </div>\n      </div>\n\n      <div class=\"w3-container w3-card-2 w3-white\">\n        <h2 class=\"w3-text-grey w3-padding-16\"><i class=\"fa fa-check fa-fw w3-margin-right w3-xxlarge w3-text-teal\"></i>Your Past Trip</h2>\n        <div class=\"w3-container\" *ngFor=\"let trip of pastTrips | orderBy : '-date'\">\n          <h5 class=\"w3-opacity\"><b>To {{trip.destination}}</b></h5>\n          <h6 class=\"w3-text-teal\"><i class=\"fa fa-calendar fa-fw w3-margin-right\"></i>{{trip.date}}</h6>\n          <p>{{trip.description}}</p>\n          <hr>\n        </div>\n      </div>\n\n    <!-- End Right Column -->\n    </div>\n\n<!-- End Grid -->\n  </div>\n<!-- End Page Container -->\n<!-- </div> -->\n\n</div>\n"
+module.exports = "<div *ngIf=\"user\">\n<!-- Page Container -->\n<!-- <div class=\"w3-content w3-margin-top\" style=\"max-width:1400px;\"> -->\n\n  <!-- The Grid -->\n  <div class=\"w3-row-padding\">\n\n    <!-- Left Column -->\n    <div class=\"w3-third\">\n      <div class=\"w3-white w3-text-grey w3-card-4\">\n        <div class=\"w3-display-container\">\n          <img src=\"../../../assets/images/logo.png\" style=\"width:100%\" alt=\"Avatar\">\n          <div class=\"w3-display-bottomleft w3-container w3-text-black\">\n            <h2 class=\"w3-text-white\">{{user.name}}</h2>\n          </div>\n        </div>\n        <br>\n        <div class=\"w3-container\" style=\"padding-top:10\">\n         <p><i class=\"fa fa-user fa-fw w3-margin-right w3-large w3-text-teal\"></i>Name: <b>{{user.name}}</b></p>\n         <p><i class=\"fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal\"></i>Username: <b>{{user.username}}</b></p>\n         <p class=\"capitalize\"><i class=\"fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal\"></i>Nationality: <b>{{user.nationality}}</b></p>\n         <p class=\"capitalize\"><i class=\"fa fa-home fa-fw w3-margin-right w3-large w3-text-teal\"></i>Country Of Resident: <b>{{user.countryOfResident}}</b></p>\n         <p><i class=\"fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal\"></i>Email: <b>{{user.email}}</b></p>\n         <hr>\n         <button type=\"button\" class=\"btn btn-default\" [routerLink]=\"['/editProfile']\">Edit You Information</button>\n         <!-- <button type=\"button\" class=\"btn btn-default\" [routerLink]=\"['/tripPage']\">Change you Password</button> -->\n         <p style=\"padding-bottom:10px\">\n       </div>\n     </div>\n     <br>\n<!-- End Left Column -->\n    </div>\n\n    <!-- Right Column -->\n    <div class=\"w3-twothird\">\n      <div class=\"w3-container w3-card-2 w3-white w3-margin-bottom\">\n        <h2 class=\"w3-text-grey w3-padding-16\"><i class=\"fa fa-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal\"></i>Your Upcoming Trip {{currentDate}}</h2>\n\n        <div class=\"w3-container\" *ngFor=\"let trip of upcomingTrips | orderBy : 'date'\">\n          <h5 class=\"w3-opacity\"><b>To {{trip.destination}}</b></h5>\n          <h6 class=\"w3-text-teal\"><i class=\"fa fa-calendar fa-fw w3-margin-right\"></i>{{trip.date | date : \"EEEE, d MMMM, y\" }}</h6>\n          <p>{{trip.description}}</p>\n          <hr>\n        </div>\n      </div>\n\n      <div class=\"w3-container w3-card-2 w3-white w3-margin-bottom\">\n        <h2 class=\"w3-text-grey w3-padding-16\"><i class=\"fa fa-check fa-fw w3-margin-right w3-xxlarge w3-text-teal\"></i>Your Past Trip</h2>\n        <div class=\"w3-container\" *ngFor=\"let trip of pastTrips | orderBy : '-date'\">\n          <h5 class=\"w3-opacity\"><b>To {{trip.destination}}</b></h5>\n          <h6 class=\"w3-text-teal\"><i class=\"fa fa-calendar fa-fw w3-margin-right\"></i>{{trip.date | date : \"EEEE, d MMMM, y\"}}</h6>\n          <p>{{trip.description}}</p>\n          <hr>\n        </div>\n      </div>\n\n    <!-- End Right Column -->\n    </div>\n\n<!-- End Grid -->\n  </div>\n<!-- End Page Container -->\n<!-- </div> -->\n\n</div>\n"
 
 /***/ }),
 
