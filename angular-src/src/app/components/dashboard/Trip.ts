@@ -5,4 +5,5 @@ export class Trips{
     description: String;
     host: String;
     members:[String];
+    chat:[String];
 }

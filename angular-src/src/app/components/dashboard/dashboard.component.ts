@@ -22,6 +22,7 @@ export class DashboardComponent implements OnInit {
   user: any;
   username: String;
   trip:Trips;
+  msg:String;
 
  // destination: String;
   date: String;
@@ -95,6 +96,37 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  sendMessage(trip) {
+    /*const _trip = {
+     destination: trip.destination,
+     date: trip.date,
+     tripName: trip.tripName,
+     description: trip.description,
+     host: trip.host,
+     members: trip.members
+
+     }*/
+    //console.log(this.user);
+    //console.log(this.user._id);
+    //trip.members.indexOf(this.username) === -1 ? trip.members.push(this.username) : console.log("This item already exists1");
+    //this.user.trips.indexOf(trip._id) === -1 ? this.user.trips.push(trip._id) : console.log("This item already exists2");
+
+    trip.chat.push(this.username + " : " + this.msg)
+    console.log("trip is");
+
+    console.log(trip);
+    this.tripService.sendMsg(trip).subscribe(data => {});
+    /*this.authService.updateUser(this.user).subscribe(data => {
+      if(data){
+        this.flashMessage.show('Joined Trip', {cssClass: 'alert-success', timeout: 3000});
+        // this.router.navigate(['/profile']);
+      } else {
+        this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
+        // this.router.navigate(['/editProfile']);
+      }
+    });*/
+
+  }
   tripInfo(){
 
 

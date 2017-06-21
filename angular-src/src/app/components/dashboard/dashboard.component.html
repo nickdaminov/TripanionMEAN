@@ -95,15 +95,32 @@
                             <div class="row">
                                 <div class="col-md-10">
                                     <div class="chatbox" id="chatbox">
-
+                                        <div *ngFor="let msgs of trip.chat; let i = index">
+                                            <div>
+                                                {{msgs}}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <input type="text" placeholder="Type a message" id="messageBox" style="width:90%;">
-                                    <button type="button" class="btn btn-default" id="sendButton" (click)="sendMessage()">Send</button>
+
+
+
+
+                                    <form (submit)="sendMessage(trip)">
+                                        <div class="form-group">
+                                            <input type="text" [(ngModel)]="msg" name="msg" class="form-control" placeholder="Type a message" id="messageBox" style="width:80%;">
+                                        </div>
+
+                                        <input type="submit" class="btn btn-default" id="sendButton" value="Send">
+                                    </form>
+
+
+
+
                                 </div>
-                                <div class="col-md-2" >members and host
-                                    <button type="button" class="host">Host : {{trip.host}}
+                                <div class="col-md-2" >Host :
+                                    <button type="button" class="host">{{trip.host}}
                                     </button>
-                                        <div class="members"> Members :
+                                        <div> Members :
                                             <div  *ngFor="let member of trip.members; let i = index">
                                                 <button type="button" class="members">
                                                     {{member}}
@@ -126,14 +143,16 @@
                     <modal-footer>
                         <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
                     </modal-footer>                </modal>
-            <span style="display: inline;">
-        <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Information</button>
-        <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>
-        </span>
 
-
-
-    </div>
-</div>
+                <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-default" (click)="modal.open('lg')" style="width:100%">View Information</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-default" (click)="joinTrip(trip)" style="width:100%; border-radius: 0px 0px 8px 8px">Join Trip</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
 </div>

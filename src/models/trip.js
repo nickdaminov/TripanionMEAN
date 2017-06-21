@@ -26,6 +26,10 @@ const TripSchema = mongoose.Schema({
     members: {
         type: [String],
         required: true
+    },
+    chat : {
+        type: [String],
+        required: false
     }
 });
 
