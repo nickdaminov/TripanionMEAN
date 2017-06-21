@@ -66,7 +66,7 @@
       <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date | date : "EEEE, d MMMM, y" }}</h6>
       <p>{{trip.description}}</p>
       <hr>
-      <form (submit)="tripInfo()">
+      <!-- <form (submit)="tripInfo()"> -->
               <modal #modal>
                   <modal-header [show-close]="true">
                       <h2 class="modal-title">{{trip.tripName}}</h2>
@@ -115,7 +115,7 @@
       </span>
       <p style="padding-bottom:10px">
 
-      </form>
+      <!-- </form> -->
     </div>
   </div>
 

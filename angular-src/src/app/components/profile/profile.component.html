@@ -40,6 +40,51 @@
           <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date | date : "EEEE, d MMMM, y" }}</h6>
           <p>{{trip.description}}</p>
+          <span style="display: inline;">
+            <modal #modal>
+                <modal-header [show-close]="true">
+                    <h2 class="modal-title">{{trip.tripName}}</h2>
+                </modal-header>
+                <modal-body>
+
+                    <div class="container">
+
+                        <div> Destination {{trip.destination}}, Date</div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="container">chat</div>
+                            </div>
+                            <div class="col-md-4" >members and host
+                                <div class="host">Host : {{trip.host}}
+                                    <div class="members"> Members :
+                                        <div  *ngFor="let member of trip.members; let i = index">
+                                            <div>
+                                                {{member}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div>Description : {{trip.description}}</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </modal-body>
+                <modal-footer>
+                    <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
+                </modal-footer>                </modal>
+            <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
+            <p style="padding-bottom:10px">
+          </span>
           <hr>
         </div>
       </div>
@@ -50,6 +95,51 @@
           <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date | date : "EEEE, d MMMM, y"}}</h6>
           <p>{{trip.description}}</p>
+          <span style="display: inline;">
+            <modal #modal>
+                <modal-header [show-close]="true">
+                    <h2 class="modal-title">{{trip.tripName}}</h2>
+                </modal-header>
+                <modal-body>
+
+                    <div class="container">
+
+                        <div> Destination {{trip.destination}}, Date</div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="container">chat</div>
+                            </div>
+                            <div class="col-md-4" >members and host
+                                <div class="host">Host : {{trip.host}}
+                                    <div class="members"> Members :
+                                        <div  *ngFor="let member of trip.members; let i = index">
+                                            <div>
+                                                {{member}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div>Description : {{trip.description}}</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </modal-body>
+                <modal-footer>
+                    <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
+                </modal-footer>                </modal>
+      <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
+      <p style="padding-bottom:10px">
+      </span>
           <hr>
         </div>
       </div>
