@@ -1,8 +1,75 @@
 
-<div *ngIf="user">
+<!-- <div *ngIf="user">
   <h2 class="page-header">{{user.name}}</h2>
   <ul class="list-group">
     <li class="list-group-item">Username: {{user.username}}</li>
     <li class="list-group-item">Email: {{user.email}}</li>
+    <li class="list-group-item">Nationality: {{user.nationality}}</li>
   </ul>
+</div> -->
+
+<div *ngIf="user">
+<!-- Page Container -->
+<!-- <div class="w3-content w3-margin-top" style="max-width:1400px;"> -->
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="../../../assets/images/logo.png" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2 class="w3-text-white">{{user.name}}</h2>
+          </div>
+        </div>
+        <br>
+        <div class="w3-container" style="padding-top:10">
+         <p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-teal"></i>Name: <b>{{user.name}}</b></p>
+         <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Username: <b>{{user.username}}</b></p>
+         <p class="capitalize"><i class="fa fa-globe fa-fw w3-margin-right w3-large w3-text-teal"></i>Nationality: <b>{{user.nationality}}</b></p>
+         <p class="capitalize"><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Country Of Resident: <b>{{user.countryOfResident}}</b></p>
+         <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Email: <b>{{user.email}}</b></p>
+         <hr>
+         <button type="button" class="btn btn-default" [routerLink]="['/editProfile']">Edit You Information</button>
+         <!-- <button type="button" class="btn btn-default" [routerLink]="['/tripPage']">Change you Password</button> -->
+         <p style="padding-bottom:10px">
+       </div>
+     </div>
+     <br>
+<!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Your Upcoming Trip {{currentDate}}</h2>
+
+        <div class="w3-container" *ngFor="let trip of upcomingTrips | orderBy : 'date'">
+          <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date}}</h6>
+          <p>{{trip.description}}</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card-2 w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-check fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Your Past Trip</h2>
+        <div class="w3-container" *ngFor="let trip of pastTrips | orderBy : '-date'">
+          <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date}}</h6>
+          <p>{{trip.description}}</p>
+          <hr>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+
+<!-- End Grid -->
+  </div>
+<!-- End Page Container -->
+<!-- </div> -->
+
 </div>

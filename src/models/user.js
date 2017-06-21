@@ -21,6 +21,14 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    nationality: {
+        type: String,
+        required: true
+    },
+    countryOfResident: {
+        type: String,
+        required: true
+    },
     trips : {
         type: [String],
         required: false
@@ -46,6 +54,11 @@ module.exports.addUser = function(newUser, callback){
             newUser.save(callback);
         });
     });
+}
+
+module.exports.updateUser = function(updateUser, callback){
+    const filter = {name: name};
+    User.updateOne(filter, updateUser, callback);
 }
 
 module.exports.comparePassword = function(candidatePassword, hash, callback){

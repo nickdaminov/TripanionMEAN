@@ -4,6 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
+const mongojs = require('mongojs');
 
 // Register
 router.post('/register', (req, res, next) => {
@@ -11,7 +12,9 @@ router.post('/register', (req, res, next) => {
         name: req.body.name,
         email: req.body.email,
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
+        nationality: req.body.nationality,
+        countryOfResident: req.body.countryOfResident
     });
 
     User.addUser(newUser, (err, user) => {
@@ -48,7 +51,9 @@ router.post('/authenticate', (req, res, next) => {
                         id: user._id,
                         name: user.name,
                         username: user.username,
-                        email: user.email
+                        email: user.email,
+                        nationality: user.nationality,
+                        countryOfResident: user.countryOfResident
                     }
                 });
             } else {
@@ -61,6 +66,26 @@ router.post('/authenticate', (req, res, next) => {
 // Profile
 router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
     res.json({user: req.user});
+});
+
+// editProfile
+router.put('/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+    var user = req.body;
+
+    if(!user){
+        res.status(400);
+        res.json({
+            "error":"Bad Data"
+        });
+    } else {
+        User.update({_id: mongojs.ObjectId(req.params.id)},user, {}, function(err, user_new){
+            if(err){
+                res.send(err);
+            }
+            console.log("here");
+            res.json(user_new);
+        });
+    }
 });
 
 module.exports = router;

@@ -19,6 +19,16 @@ export class AuthService {
         .map(res => res.json());
   }
 
+  updateUser(user){
+    let headers = new Headers();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type','application/json');
+
+    return this.http.put('users/'+user._id, JSON.stringify(user),{headers: headers})
+
+        .map(res => res.json());
+  }
+
   authenticateUser(user){
     let headers = new Headers();
     headers.append('Content-Type','application/json');

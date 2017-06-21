@@ -20,6 +20,7 @@ import {AuthGuard} from './guards/auth.guard';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { CreateTripComponent } from './components/create-trip/create-trip.component';
 import {TripService} from './services/trip.service';
+import {ORDERBY_PROVIDERS} from './orderBy';
 
 import { ModalModule } from 'ng2-modal-dialog/modal.module';
 //import { TripPageComponent} from './components/trip-page/trip-page.component';
@@ -49,7 +50,8 @@ const appRoutes: Routes =  [
     ProfileComponent,
     EditProfileComponent,
     CreateTripComponent,
-    TripPageComponent
+    TripPageComponent,
+    ORDERBY_PROVIDERS,
   ],
   imports: [
     BrowserModule,

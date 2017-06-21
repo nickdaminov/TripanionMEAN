@@ -6,7 +6,7 @@ export class ValidateService {
   constructor() { }
 
   validateRegister(user){
-    if(user.name == undefined || user.email == undefined || user.username == undefined || user.password == undefined){
+    if(user.name == undefined || user.email == undefined || user.username == undefined || user.password == undefined || user.nationality == undefined){
       return false;
     } else {
       return true;
@@ -18,4 +18,24 @@ export class ValidateService {
     return re.test(email);
   }
 
+  validatePassword(password){
+    //Have no requirement yet
+    return true;
+  }
+
+  validateNationality(nationality){
+    if(nationality === ""){
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  validateCountryOfResident(country){
+    if(country === ""){
+      return false;
+    } else {
+      return true;
+    }
+  }
 }

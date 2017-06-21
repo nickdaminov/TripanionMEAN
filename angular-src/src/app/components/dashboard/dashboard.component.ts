@@ -18,8 +18,8 @@ import { AppModule } from '../../app.module';
 export class DashboardComponent implements OnInit {
 
   destination: String;
-  trips: Trips[];
-  user: Object;
+  trips: any[];
+  user: any;
   username: String;
   trip:Trips;
 
@@ -75,16 +75,22 @@ export class DashboardComponent implements OnInit {
       members: trip.members
 
     }*/
-    trip.members.push(this.username);
+    console.log(this.user);
+    console.log(this.user._id);
+    trip.members.indexOf(this.username) === -1 ? trip.members.push(this.username) : console.log("This item already exists1");
+    this.user.trips.indexOf(trip._id) === -1 ? this.user.trips.push(trip._id) : console.log("This item already exists2");
     console.log("trip is");
 
     console.log(trip);
-    this.tripService.addMember(trip).subscribe(data => {
-     /* if (data.success) {
+    this.tripService.addMember(trip).subscribe(data => {});
+    this.authService.updateUser(this.user).subscribe(data => {
+      if(data){
         this.flashMessage.show('Joined Trip', {cssClass: 'alert-success', timeout: 3000});
+        // this.router.navigate(['/profile']);
       } else {
         this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
-      }*/
+        // this.router.navigate(['/editProfile']);
+      }
     });
 
   }
