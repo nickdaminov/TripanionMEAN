@@ -1,13 +1,86 @@
+.joinButton{
+  float:right;
+}
+
+.host{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width:100%;
+  background-color: hotpink;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 2px;
+}
+
+.members{
+  background-color: mediumspringgreen;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width:100%;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin: 2px;
+}
+
+.chatbox {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #44edc0;
+  margin: 5px;
+  overflow: auto;
+}
+
+.trips {
+  margin: auto;
+}
+
 .trip {
 
   width:300px;
   hieght:400px;
-  background-color: #d1f2eb;
+  background-color: #cefff1;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #44edc0;
   margin: 5px;
-
 }
+
+.description {
+  display: block;
+  color: #707070;
+  width: 290px;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  margin-left: 10px;
+  overflow-wrap: break-word;
+}
+
+.content {
+  display: block;
+  width: 280px;
+  margin-left: 15px;
+}
+
+.bigcontent {
+  display: block;
+  width: 280px;
+  height: 44px;
+  margin-left: 15px;
+  overflow: auto;
+}
+
 
 .rating {
   background-color:  #5dade2 ;

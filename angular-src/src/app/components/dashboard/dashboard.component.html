@@ -67,48 +67,67 @@
       <p>{{trip.description}}</p>
       <hr>
       <!-- <form (submit)="tripInfo()"> -->
-              <modal #modal>
-                  <modal-header [show-close]="true">
-                      <h2 class="modal-title">{{trip.tripName}}</h2>
-                  </modal-header>
-                  <modal-body>
+      <modal #modal>
+          <modal-header [show-close]="true">
+              <h2 class="modal-title">{{trip.tripName}}</h2>
+          </modal-header>
+          <modal-body>
 
-                      <div class="container">
+              <div class="container-fluid">
 
-                          <div> Destination {{trip.destination}}, Date</div>
+                  <div> Destination {{trip.destination}}, Date</div>
 
-                          <div class="row">
-                              <div class="col-md-8">
-                                  <div class="container">chat</div>
-                              </div>
-                              <div class="col-md-4" >members and host
-                                  <div class="host">Host : {{trip.host}}
-                                      <div class="members"> Members :
-                                          <div  *ngFor="let member of trip.members; let i = index">
-                                              <div>
-                                                  {{member}}
-                                              </div>
-                                          </div>
-                                      </div>
+                  <div class="row">
+                      <div class="col-md-10">
+                          <div class="chatbox" id="chatbox">
+                              <div *ngFor="let msgs of trip.chat; let i = index">
+                                  <div>
+                                      {{msgs}}
                                   </div>
                               </div>
-
-                              <br />
-                              <div class="row">
-                                  <div class="col-md-10">
-                                      <div>Description : {{trip.description}}</div>
-                                  </div>
-
-                              </div>
-
                           </div>
+
+
+
+
+                          <form (submit)="sendMessage(trip)">
+                              <div class="form-group">
+                                  <input type="text" [(ngModel)]="msg" name="msg" class="form-control" placeholder="Type a message" id="messageBox" style="width:80%;">
+                              </div>
+
+                              <input type="submit" class="btn btn-default" id="sendButton" value="Send">
+                          </form>
+
+
+
+
+                      </div>
+                      <div class="col-md-2" >Host :
+                          <button type="button" class="host">{{trip.host}}
+                          </button>
+                              <div> Members :
+                                  <div  *ngFor="let member of trip.members; let i = index">
+                                      <button type="button" class="members">
+                                          {{member}}
+                                      </button>
+                                  </div>
+                                  </div>
+                              </div>
                       </div>
 
-                  </modal-body>
-                  <modal-footer>
-                      <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
-                      <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
-                  </modal-footer>                </modal>
+                      <br />
+                      <div class="row">
+                          <div class="col-md-10">
+                              <div>Description : {{trip.description}}</div>
+                          </div>
+
+                      </div>
+
+                  </div>
+          </modal-body>
+          <modal-footer>
+              <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
+          </modal-footer>                </modal>
           <span style="display: inline;">
       <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
       <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>

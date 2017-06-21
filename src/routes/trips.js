@@ -378,6 +378,9 @@ router.put('/trip/:id', function(req, res, next){
     if(trip.members){
         updTrip.members = trip.members;
     }
+    if(trip.chat){
+        updTrip.chat = trip.chat;
+    }
     console.log(trip);
 
     console.log(updTrip);
