@@ -3,5 +3,6 @@ export class Trips{
     date: String;
     tripName: String;
     description: String;
+    host: String;
     members:[String];
 }

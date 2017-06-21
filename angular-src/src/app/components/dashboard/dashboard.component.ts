@@ -4,6 +4,9 @@ import {AuthService} from "../../services/auth.service";
 import {TripService} from "../../services/trip.service";
 import {Trips} from "./Trip";
 import {FlashMessagesService} from 'angular2-flash-messages';
+import {TripPageComponent} from "../trip-page/trip-page.component";
+import { ModalService } from 'ng2-modal-dialog/modal.module';
+import { AppModule } from '../../app.module';
 
 
 
@@ -18,6 +21,15 @@ export class DashboardComponent implements OnInit {
   trips: any[];
   user: any;
   username: String;
+  trip:Trips;
+
+ // destination: String;
+  date: String;
+  tripName: String;
+  description: String;
+  host: String;
+ // user: Object;
+  members:[String];
 
   click(index) {
     //this.trips[index].likes = this.trips[index].likes + 1;
@@ -83,7 +95,27 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  tripInfo(trip){
+  tripInfo(){
+
+
+    //this.tripPage.setTrip(trip)/*.subscribe(data => {
+     //if (data.success) {
+    //    this.flashMessage.show('Got Trip', {cssClass: 'alert-success', timeout: 3000});
+      //} else {
+    //    this.flashMessage.show('Something went wrong', {cssClass: 'alert-danger', timeout: 3000});
+       // this.router.navigate(['/createTrip']);
+      //}
+    //});*/
+    const trip = {
+      destination: this.destination,
+      date: this.date,
+      tripName: this.tripName,
+      description: this.description,
+      host: this.host,
+      members: this.members
+    }
+
+    return this.trip;
 
   }
 

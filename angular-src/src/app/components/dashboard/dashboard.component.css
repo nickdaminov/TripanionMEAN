@@ -25,3 +25,16 @@
 .buttonHolder{
   text-align: center;
 }
+
+.joinButton{
+  float:right;
+}
+
+.host{
+  background-color: hotpink;
+}
+
+.members{
+  background-color: mediumspringgreen;
+}
+
