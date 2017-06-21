@@ -7,7 +7,7 @@ import {FlashMessagesService} from 'angular2-flash-messages';
 import {TripPageComponent} from "../trip-page/trip-page.component";
 import { ModalService } from 'ng2-modal-dialog/modal.module';
 import { AppModule } from '../../app.module';
-
+import {ORDERBY_PROVIDERS} from "../../orderBy";
 
 
 @Component({

@@ -1,114 +1,126 @@
-
-
 <h2 class="page-header">Trip Room</h2>
 
+<!-- The Grid -->
+<div class="w3-row-padding">
 
-<form (submit)="searchTrips()">
-    <div class="form-group">
-        <label>Destination</label><br>
-        <select [(ngModel)]="destination" name="destination" class="form-control">
-            <option value="All Destination">All Destination</option>
-            <option value="Austria">Austria</option>
-            <option value="Italy">Italy</option>
-            <option value="Belgium">Belgium</option>
-            <option value="Latvia">Latvia</option>
-            <option value="Bulgaria">Bulgaria</option>
-            <option value="Lithuania">Lithuania</option>
-            <option value="Croatia">Croatia</option>
-            <option value="Luxembourg">Luxembourg</option>
-            <option value="Cyprus">Cyprus</option>
-            <option value="Malta">Malta</option>
-            <option value="Czech Republic">Czech Republic</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="Denmark">Denmark</option>
-            <option value="Poland">Poland</option>
-            <option value="Estonia">Estonia</option>
-            <option value="Portugal">Portugal</option>
-            <option value="Finland">Finland</option>
-            <option value="Romania">Romania</option>
-            <option value="France">France</option>
-            <option value="Slovakia">Slovakia</option>
-            <option value="Germany">Germany</option>
-            <option value="Slovenia">Slovenia</option>
-            <option value="Greece">Greece</option>
-            <option value="Spain">Spain</option>
-            <option value="Hungary">Hungary</option>
-            <option value="Sweden">Sweden</option>
-            <option value="Ireland">Ireland</option>
-            <option value="United Kingdom">United Kingdom</option>
-        </select>
+<!-- Left Column -->
+<div class="w3-third">
+  <div class="w3-white w3-text-grey w3-card-4">
+    <div class="w3-container" style="padding-top:10">
+      <form (submit)="searchTrips()">
+          <div class="form-group">
+              <label>Destination</label><br>
+              <select [(ngModel)]="destination" name="destination" class="form-control">
+                  <option value="All Destination">All Destination</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Latvia">Latvia</option>
+                  <option value="Bulgaria">Bulgaria</option>
+                  <option value="Lithuania">Lithuania</option>
+                  <option value="Croatia">Croatia</option>
+                  <option value="Luxembourg">Luxembourg</option>
+                  <option value="Cyprus">Cyprus</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Czech Republic">Czech Republic</option>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="Denmark">Denmark</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Estonia">Estonia</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Finland">Finland</option>
+                  <option value="Romania">Romania</option>
+                  <option value="France">France</option>
+                  <option value="Slovakia">Slovakia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Slovenia">Slovenia</option>
+                  <option value="Greece">Greece</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Hungary">Hungary</option>
+                  <option value="Sweden">Sweden</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="United Kingdom">United Kingdom</option>
+              </select>
+              <div class="buttonHolder" style="padding-top:10">
+              <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="searchTrips()">Search</button>
+              </div>
+              <hr>
+              <div class="buttonHolder">
+              <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] [routerLink]="['/createTrip']">Create Trip</button>
+              </div>
+          </div>
+      </form>
+     <p style="padding-bottom:10px">
+   </div>
+ </div>
+ <br>
+<!-- End Left Column -->
+</div>
 
-        <div class="buttonHolder">
-        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="searchTrips()">Search</button>
-        <button type="button" class="btn btn-default" [routerLinkActive]="['active']" [routerLinkActiveOptions] [routerLink]="['/createTrip']">Create Trip</button>
-        </div>
+<!-- Right Column -->
+<div class="w3-twothird">
+  <div class="w3-container w3-card-2 w3-white w3-margin-bottom" *ngFor="let trip of trips | orderBy : 'date'">
+    <h2 class="w3-text-grey w3-padding-5"><i class="fa fa-plane fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>{{trip.tripName}}</h2>
+    <div class="w3-container">
+      <h5 class="w3-opacity"><b>To {{trip.destination}}</b></h5>
+      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{trip.date | date : "EEEE, d MMMM, y" }}</h6>
+      <p>{{trip.description}}</p>
+      <hr>
+      <form (submit)="tripInfo()">
+              <modal #modal>
+                  <modal-header [show-close]="true">
+                      <h2 class="modal-title">{{trip.tripName}}</h2>
+                  </modal-header>
+                  <modal-body>
+
+                      <div class="container">
+
+                          <div> Destination {{trip.destination}}, Date</div>
+
+                          <div class="row">
+                              <div class="col-md-8">
+                                  <div class="container">chat</div>
+                              </div>
+                              <div class="col-md-4" >members and host
+                                  <div class="host">Host : {{trip.host}}
+                                      <div class="members"> Members :
+                                          <div  *ngFor="let member of trip.members; let i = index">
+                                              <div>
+                                                  {{member}}
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <br />
+                              <div class="row">
+                                  <div class="col-md-10">
+                                      <div>Description : {{trip.description}}</div>
+                                  </div>
+
+                              </div>
+
+                          </div>
+                      </div>
+
+                  </modal-body>
+                  <modal-footer>
+                      <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
+                      <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
+                  </modal-footer>                </modal>
+          <span style="display: inline;">
+      <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
+      <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>
+      </span>
+      <p style="padding-bottom:10px">
+
+      </form>
     </div>
-</form>
+  </div>
 
-<div class="trips">
-    <div class="trip" *ngFor="let trip of trips; let i = index">
-        <form (submit)="tripInfo()">
+<!-- End Right Column -->
+</div>
 
-
-            <h6>Destination: </h6>
-            <p>{{trip.destination}}</p>
-            <h6>Date: </h6>
-            <p>{{trip.date}} </p>
-            <h6>Trip Name: </h6>
-            <p>{{trip.tripName}} </p>
-            <h6>Description: </h6>
-            <p>{{trip.description}} </p>
-
-                <modal #modal>
-                    <modal-header [show-close]="true">
-                        <h2 class="modal-title">{{trip.tripName}}</h2>
-                    </modal-header>
-                    <modal-body>
-
-                        <div class="container">
-
-                            <div> Destination {{trip.destination}}, Date</div>
-
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="container">chat</div>
-                                </div>
-                                <div class="col-md-4" >members and host
-                                    <div class="host">Host : {{trip.host}}
-                                        <div class="members"> Members :
-                                            <div  *ngFor="let member of trip.members; let i = index">
-                                                <div>
-                                                    {{member}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <br />
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <div>Description : {{trip.description}}</div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </modal-body>
-                    <modal-footer>
-                        <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
-                        <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
-                    </modal-footer>                </modal>
-            <span style="display: inline;">
-        <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
-        <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>
-        </span>
-
-
-        </form>
-
-
-    </div>
+<!-- End Grid -->
 </div>
