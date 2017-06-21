@@ -46,18 +46,41 @@
 </form>
 
 <div class="trips">
-    <div class="trip" *ngFor="let trip of trips; let i = index">
-        <form (submit)="tripInfo()">
-
-
-            <h6>Destination: </h6>
-            <p>{{trip.destination}}</p>
-            <h6>Date: </h6>
-            <p>{{trip.date}} </p>
-            <h6>Trip Name: </h6>
-            <p>{{trip.tripName}} </p>
-            <h6>Description: </h6>
-            <p>{{trip.description}} </p>
+    <div class="container">
+        <div class="trip" *ngFor="let trip of trips; let i = index">
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="description">
+                        Destination:
+                    </div>
+                    <div class="content">
+                        {{trip.destination}}
+                    </div>
+                </div>
+                <div class="row" style="overflow-wrap:break-word;">
+                    <div class="description">
+                        Date:
+                    </div>
+                    <div class="content">
+                        {{trip.date}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="description">
+                        Trip Name:
+                    </div>
+                    <div class="bigcontent">
+                        {{trip.tripName}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="description">
+                        Description:
+                    </div>
+                    <div class="bigcontent">
+                        {{trip.description}}
+                    </div>
+                </div>
 
                 <modal #modal>
                     <modal-header [show-close]="true">
@@ -65,24 +88,29 @@
                     </modal-header>
                     <modal-body>
 
-                        <div class="container">
+                        <div class="container-fluid">
 
                             <div> Destination {{trip.destination}}, Date</div>
 
                             <div class="row">
-                                <div class="col-md-8">
-                                    <div class="container">chat</div>
+                                <div class="col-md-10">
+                                    <div class="chatbox" id="chatbox">
+
+                                    </div>
+                                    <input type="text" placeholder="Type a message" id="messageBox" style="width:90%;">
+                                    <button type="button" class="btn btn-default" id="sendButton" (click)="sendMessage()">Send</button>
                                 </div>
-                                <div class="col-md-4" >members and host
-                                    <div class="host">Host : {{trip.host}}
+                                <div class="col-md-2" >members and host
+                                    <button type="button" class="host">Host : {{trip.host}}
+                                    </button>
                                         <div class="members"> Members :
                                             <div  *ngFor="let member of trip.members; let i = index">
-                                                <div>
+                                                <button type="button" class="members">
                                                     {{member}}
-                                                </div>
+                                                </button>
+                                            </div>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
 
                                 <br />
@@ -94,21 +122,18 @@
                                 </div>
 
                             </div>
-                        </div>
-
                     </modal-body>
                     <modal-footer>
                         <button type="button" class="btn btn-primary" [routerLinkActive]="['active']" [routerLinkActiveOptions] (click)="joinTrip(trip)">Join</button>
-                        <button type="button" class="btn btn-default" (click)="modal.close()">Ok</button>
                     </modal-footer>                </modal>
             <span style="display: inline;">
-        <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Infomation</button>
+        <button type="button" class="btn btn-default" (click)="modal.open('lg')">View Information</button>
         <button type="button" class="btn btn-default" (click)="joinTrip(trip)">Join Trip</button>
         </span>
 
 
-        </form>
 
-
+    </div>
+</div>
     </div>
 </div>
